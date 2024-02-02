@@ -1,0 +1,655 @@
+{
+	"info": {
+		"_postman_id": "51e67476-6f97-4f4c-9e6c-0ec644498d7e",
+		"name": "Museum Capstone Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31126918"
+	},
+	"item": [
+		{
+			"name": "1. Artist Tests",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artist/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artist/search?name=Vincent",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Vincent"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Artists sorted by Paintings in Museums",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sortedartists",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sortedartists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Artist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test artist\",\r\n    \"yearBorn\": 1950,\r\n    \"yearDead\": 2020\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/artist",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Artist",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"John\",\r\n    \"yearBorn\": 1950,\r\n    \"yearDead\": 2020\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/artist",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Museum Tests",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/museum",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/museum/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Museum Most Paintings by Style",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/museum/most?style=RENAISSANCE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum",
+								"most"
+							],
+							"query": [
+								{
+									"key": "style",
+									"value": "RENAISSANCE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Museum Most Art by Artist ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/museum/most?artistID=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum",
+								"most"
+							],
+							"query": [
+								{
+									"key": "artistID",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Museum",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Museum\",\r\n    \"curator\": {\r\n        \"name\": \"Test Curator\",\r\n        \"yearBorn\": 1960\r\n    },\r\n    \"location\": {\r\n        \"city\": \"Glasgow\",\r\n        \"country\": \"UK\"\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/museum",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Museum",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Glasgow Museum\",\r\n    \"curator\": {\r\n        \"id\": 1\r\n    },\r\n    \"location\": {\r\n        \"id\": 1\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/museum",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. Art Tests",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/art",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"art"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artist/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Paintings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/painting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"painting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Sculptures",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sculpture",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sculpture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Artists First Sculpture by Artist ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sculpture/first/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sculpture",
+								"first",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Artists Last Sculpture by Artist ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sculpture/last/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sculpture",
+								"last",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Scultures by Museum ID and Artist ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/sculpture/11/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sculpture",
+								"11",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Art Location by Art Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/location?name=Mona",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"location"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mona"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Painting",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"test painting\",\r\n        \"artist\": {\r\n            \"id\": 1\r\n        },\r\n        \"medium\": \"OIL\",\r\n        \"museum\": {\r\n            \"id\": 1\r\n        },\r\n        \"yearCompleted\": 2000,\r\n        \"backStory\": \".....\",\r\n        \"style\": \"RENAISSANCE\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/painting",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"painting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Paintinng",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Hello World\",\r\n        \"artist\": {\r\n            \"id\": 1\r\n        },\r\n        \"medium\": \"OIL\",\r\n        \"museum\": {\r\n            \"id\": 1\r\n        },\r\n        \"yearCompleted\": 2000,\r\n        \"backStory\": \".....\",\r\n        \"style\": \"RENAISSANCE\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/painting",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"painting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Sculpture",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"test sculpture\",\r\n        \"artist\": {\r\n            \"id\": 1\r\n        },\r\n        \"medium\": \"OIL\",\r\n        \"museum\": {\r\n            \"id\": 1\r\n        },\r\n        \"yearCompleted\": 2000,\r\n        \"backStory\": \".....\"\r\n    }"
+						},
+						"url": {
+							"raw": "localhost:8080/sculpture",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"sculpture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Sculpture",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Goodbye World\",\r\n    \"artist\": {\r\n        \"id\": 1\r\n    },\r\n    \"medium\": \"MARBLE\",\r\n    \"museum\": {\r\n        \"id\": 1\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/painting",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"painting"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. Delete Tests",
+			"item": [
+				{
+					"name": "Delete Museum by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/museum/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"museum",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Art by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/art/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"art",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Artist by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/artist/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"artist",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
