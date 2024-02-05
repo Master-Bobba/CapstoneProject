@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  color: #0C0B0B;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.background{
+  background-repeat: repeat-y;
+  background-image: url('https://images.pexels.com/photos/1674049/pexels-photo-1674049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: auto auto;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  position: relative; 
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: auto;
+  margin: 0 auto;
+}
+
+.main{
+  margin-top: none;
+  margin-bottom: none;
+}
