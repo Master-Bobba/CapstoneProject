@@ -4,11 +4,13 @@ import ArtistList from "./ArtistList";
 const Artists = () => {
        
     return (
-        <div>
+        <div >
             <h1>
                 Artists
             </h1>
+            <div >
             <ArtistList />
+            </div>
         </div>
     )
 }
