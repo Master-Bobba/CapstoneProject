@@ -1,11 +1,14 @@
 import React from "react";
+import './Create.css';
 
 const CreateArt = () => {
     return (
-        <form>
+        <form class="form-card-background">
+          <div class="form-card">
             <label>
-              Art Title:
+              Art Title: 
               <input
+                class="form-input"
                 name="name"
                 type="text"/>
             </label>
@@ -13,13 +16,14 @@ const CreateArt = () => {
             <label>
               Artist:
               <input
+                class="form-input"
                 name="artist"
                 type="text"/>
             </label>
             <br />
             <label>
               Museum:
-              <select>
+              <select class="form-input">
                 <option value="louvre">The Louvre</option>
                 <option value="accademia">The Accademia Gallery</option>
                 <option value="vangogh">The Van Gogh Museum</option>
@@ -29,6 +33,7 @@ const CreateArt = () => {
             <label>
               Medium:
               <input
+                class="form-input"
                 name="medium"
                 type="text"/>
             </label>
@@ -36,6 +41,7 @@ const CreateArt = () => {
             <label>
               Year Completed:
               <input
+                class="form-input"
                 name="yearCompleted"
                 type="text"/>
             </label>
@@ -43,10 +49,13 @@ const CreateArt = () => {
             <label>
               Back Story:
               <input
+                class="form-input"
                 name="backStory"
                 type="text"/>
             </label>
             <br />
+            <button class="button">Submit</button>
+            </div>
           </form>
     )
 
