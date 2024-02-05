@@ -10,8 +10,6 @@ function DisplayMuseum (props) {
         try {
             const options = {method:'DELETE'};
             const response = await fetch(endPoint + props.museum.id, options);
-            // const data = await response.json();
-            // console.log(data);
         } catch (error) {
             console.error('Error fetching data: ', error);
         }
