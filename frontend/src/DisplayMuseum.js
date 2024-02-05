@@ -1,6 +1,4 @@
 import React from "react";
-import { update } from "./DisplayMuseum";
-
 
 function DisplayMuseum (props) {
     
