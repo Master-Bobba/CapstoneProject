@@ -4,23 +4,23 @@ networks:
   default:
 
 services:
-  # react-app:
-  #   build:
-  #     context: ./frontend
-  #   volumes:
-  #     - ./frontend:/app
-  #     - "/app/node_modules"
-  #   ports:
-  #     - "3000:3000"
+  react-app:
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend:/app
+      - "/app/node_modules"
+    ports:
+      - "3000:3000"
 
-  # spring-app:
-  #   image: openjdk:latest
-  #   working_dir: /app
-  #   volumes:
-  #     - ./MuseumCapstone:/app
-  #   ports:
-  #     - "8080:8080"
-  #   command: ./mvnw spring-boot:run
+  spring-app:
+    image: openjdk:latest
+    working_dir: /app
+    volumes:
+      - ./MuseumCapstone:/app
+    ports:
+      - "8080:8080"
+    command: ./mvnw spring-boot:run
 
   mysql-db:
     image: mysql:latest
