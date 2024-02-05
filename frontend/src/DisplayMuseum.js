@@ -1,6 +1,23 @@
 import React from "react";
+import { update } from "./DisplayMuseum";
+
 
 function DisplayMuseum (props) {
+    
+    const endPoint = 'http://localhost:8080/museum/';
+
+    const handleDelete = async (event) =>{
+        try {
+            const options = {method:'DELETE'};
+            const response = await fetch(endPoint + props.museum.id, options);
+        } catch (error) {
+            console.error('Error fetching data: ', error);
+        }
+    }
+
+    const handleEdit = (event) => {
+        console.log("Render Edit component");
+    }
 
     return (
         <div id={props.museum.id}>
@@ -18,6 +35,8 @@ function DisplayMuseum (props) {
                     <p> No art pieces yet </p>
                 )}
             </div>
+            <button id="edit" onClick={(event) => { handleEdit(event)}}> Edit </button>
+            <button id="delete" onClick={(event) => {handleDelete(event)}}> Delete </button>
         </div>
     );
 };

@@ -7,7 +7,7 @@ const MuseumList = () => {
     const endPoint = 'http://localhost:8080/museum';
     
     useEffect(() =>{
-        const fetchMeseums = async() => {
+        const fetchMuseums = async() => {
             try {
                 setMuseumData(
                     await fetch(endPoint)
@@ -17,9 +17,8 @@ const MuseumList = () => {
                 console.log('Some error fetching museums' + error);
             }
         }
-        fetchMeseums();
+        fetchMuseums();
     }, []);
-
 
     return (
         <div>
