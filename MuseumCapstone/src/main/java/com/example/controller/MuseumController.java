@@ -17,6 +17,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @AllArgsConstructor
+@CrossOrigin
 public class MuseumController {
 
     private final MuseumService museumService;

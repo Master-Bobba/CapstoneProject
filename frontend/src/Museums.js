@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import DisplayMuseum from "./DisplayMuseum";
 
 const Museums = () => {
 
@@ -22,14 +23,14 @@ const Museums = () => {
 
     return (
         <div>
-            <h3>Museums </h3>
+            <div>
+                <h3 >Museum List </h3>
+                <p>Select a Museum to explore and find our a little more about the art collections.</p>
+            </div>
             { museumData ? (
                 <div>
                     {museumData.map((museum) => (
-                        <div>
-                            <p>Museum Name: {museum.name}</p>
-                            <p>Location: {museum.location.city}, {museum.location.country}</p>
-                        </div>
+                        <DisplayMuseum museum = {museum}/>
                     ))}
                 </div>
             ) : (

@@ -21,6 +21,7 @@ import java.util.List;
 @RestController
 @Slf4j
 @AllArgsConstructor
+@CrossOrigin
 public class ArtController {
 
     private ArtService artService;
