@@ -59,7 +59,7 @@ body{
   background-position-y: center;
   background-attachment: fixed;
   position: relative; 
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
