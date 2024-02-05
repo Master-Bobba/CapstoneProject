@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    background-color: #00100F;
+    margin: 0;
+    color: #85B7B6;
+}
+
+.header__logo {
+    text-decoration: none;
+    color: #85B7B6;
+    font-weight: bold;
+    font-size: 20px;
+ }
+   
+ .nav__list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+ }
+   
+ .nav__item {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #85B7B6;
+ }
