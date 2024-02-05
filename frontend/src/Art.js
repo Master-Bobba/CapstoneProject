@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ArtDisplay from './DisplayArt';
+import './ArtPieceFraming.css';
 
 const Art = () => {
     const [artData, setArtData] = useState(null);
@@ -22,6 +23,11 @@ const Art = () => {
     return (
         <div>
             Art
+            <div class="frame">
+            <img class="img-sizing" src="https://images.pexels.com/photos/1293120/pexels-photo-1293120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="painting"/>
+            <p>"I don't know how to make this smaller..."</p>
+            <p>By Van Gogh</p>
+            </div>
         </div>
     )
 }
