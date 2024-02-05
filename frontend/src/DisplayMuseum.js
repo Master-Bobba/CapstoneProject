@@ -1,18 +1,21 @@
 import React from "react";
+import { useMuseum } from "./MuseumContext";
 
 function DisplayMuseum (props) {
     
     const endPoint = 'http://localhost:8080/museum/';
+    const { updateMuseumList } = useMuseum();
 
     const handleDelete = async (event) =>{
-        document.getElementById(''+props.museum.id).remove();
+        // document.getElementById(''+props.museum.id).remove();
+        
         try {
             const options = {method:'DELETE'};
             const response = await fetch(endPoint + props.museum.id, options);
         } catch (error) {
             console.error('Error fetching data: ', error);
         }
-        
+        updateMuseumList();
     }
 
     const handleEdit = (event) => {

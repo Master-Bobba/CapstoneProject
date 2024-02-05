@@ -8,11 +8,13 @@ import CreateArt from './CreateArt';
 import Header from './Header';
 import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { MuseumProvider } from './MuseumContext';
 
 
 function App() {
   return (
-    <body class="container">
+    <MuseumProvider>
+      <body class="container">
       <Header />
       <main class="background main">
       <div className="App" class="mainContent">
@@ -26,6 +28,8 @@ function App() {
       </main>
       <Footer />
     </body>
+    </MuseumProvider>
+    
   );
 }
 
