@@ -2,7 +2,7 @@ import React from "react";
 
 function ArtDisplay(artData) {
     
-    return(
+    return (
     artData ? (
         <div>
             <div>
@@ -11,7 +11,9 @@ function ArtDisplay(artData) {
                         <div>
                         <p>ID: {art.id}</p>
                         <p>Name: {art.name}</p>
-                        <p>Back story: {art.backstory}</p>
+                        <p>Back story: {art.backStory}</p>
+                        <button>Delete</button>
+                        <button>Edit</button>
                         </div>
                     </div>
                 ))}
