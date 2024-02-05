@@ -1,9 +1,11 @@
 import React from "react";
+import './display.css';
+
 
 function DisplayArtist(props) {
 
     return (
-        <div id={props.artist.id}>
+        <div id={props.artist.id} class="ArtistBackground">
             <p>{props.artist.name}</p>
             <p>Born: {props.artist.yearBorn}</p>
 
