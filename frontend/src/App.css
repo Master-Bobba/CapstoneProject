@@ -75,3 +75,24 @@ body{
   margin-top: none;
   margin-bottom: none;
 }
+
+.button {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  min-width: 175px;
+  margin: 0.25rem;
+  box-sizing: border-box;
+  transition: background-color 150ms;
+  text-align: center;
+  cursor: pointer;
+  background-color: #cfcabf;
+  color: #0C0B0B;
+  text-decoration: none;
+  box-shadow: var(--shadow-small);
+  border: #0c0b0b77 solid 0.25px;
+}
+
+.button:hover{
+  background-color: #FFFFFF;
+  transition: ease 0.5s;
+}
