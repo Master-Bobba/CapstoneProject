@@ -3,7 +3,7 @@ import { useMuseum } from "./MuseumContext";
 
 function DisplayMuseum (props) {
     
-    const endPoint = 'http://localhost:8080/museum/';
+    // const endPoint = 'http://localhost:8080/museum/';
     const { updateMuseumList } = useMuseum();
 
     const handleDelete = async (event) =>{
@@ -11,7 +11,7 @@ function DisplayMuseum (props) {
         
         try {
             const options = {method:'DELETE'};
-            const response = await fetch(endPoint + props.museum.id, options);
+            const response = await fetch(process.env.REACT_APP_SPRING_URL + '/museum/' + props.museum.id, options);
         } catch (error) {
             console.error('Error fetching data: ', error);
         }

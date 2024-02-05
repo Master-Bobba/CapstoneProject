@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Art from './Art';
@@ -9,6 +8,7 @@ import Header from './Header';
 import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MuseumProvider } from './MuseumContext';
+
 
 
 function App() {
@@ -34,3 +34,4 @@ function App() {
 }
 
 export default App;
+

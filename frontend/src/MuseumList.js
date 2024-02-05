@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import DisplayMuseum from "./DisplayMuseum";
 import { useMuseum } from "./MuseumContext";
 
-
 const MuseumList = () => {
 
     const { museumData, setMuseumData} = useMuseum();
