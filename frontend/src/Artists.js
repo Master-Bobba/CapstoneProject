@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ArtistList from "./ArtistList";
 
 const Artists = () => {
+       
     return (
         <div>
-            Artists
+            <h1>
+                Artists
+            </h1>
+            <ArtistList />
         </div>
     )
 }
