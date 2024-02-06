@@ -4,7 +4,7 @@ import ArtistList from "./ArtistList";
 const Artists = () => {
        
     return (
-        <div >
+        <div class="main-div-layout">
             <h1>
                 Artists
             </h1>

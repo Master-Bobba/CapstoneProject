@@ -1,6 +1,7 @@
 import React, { useEffect, useState , useRef} from 'react';
 import ArtDisplay from './DisplayArt';
 import './ArtPieceFraming.css';
+import './App.css';
 
 const Art = () => {
     const [artData, setArtData] = useState(null);
@@ -68,18 +69,12 @@ const Art = () => {
     );
 
     return (
-        <div>
-
+        <div class="main-div-layout">
             Art
             <h1>
                 Here you can view all the Art
             </h1>
             {ArtDisplay(artData)}
-            <div class="frame">
-            <img class="img-sizing" src="https://images.pexels.com/photos/1293120/pexels-photo-1293120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="painting"/>
-            <p>"I don't know how to make this smaller..."</p>
-            <p>By Van Gogh</p>
-            </div>
         </div>
     )
 }

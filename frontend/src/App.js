@@ -17,14 +17,12 @@ function App() {
       <body class="container">
       <Header />
       <main class="background main">
-      <div className="App" class="mainContent">
         <Routes>
           <Route path="/Art" element={<Art />} />
           <Route path="/Artists" element={<Artists />} />
           <Route path="/Museums" element={<Museums />} />
           <Route path="/CreateArt" element={<CreateArt />} />
         </Routes>
-      </div>
       </main>
       <Footer />
     </body>
