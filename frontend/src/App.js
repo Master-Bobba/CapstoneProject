@@ -4,6 +4,8 @@ import Art from './Art';
 import Artists from './Artists';
 import Museums from './Museums';
 import CreateArt from './CreateArt';
+import CreateArtist from './CreateArtist';
+import CreateMuseum from './CreateMuseum';
 import Header from './Header';
 import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,15 +23,17 @@ function App() {
         <Header />
         <main class="background main">
           <Routes>
+            <Route path="/CreateMuseum" element={<CreateMuseum />} />
             <Route path="/Art" element={<Art />} />
             <Route path="/Artists" element={<Artists />} />
             <Route path="/Museums" element={<Museums />} />
             <Route path="/CreateArt" element={<CreateArt />} />
+            <Route path="/CreateArtist" element={<CreateArtist />} />
           </Routes>
-        </main>
-        <Footer />
-        </body>
-      </ArtistProvider>
+      </main>
+      <Footer />
+    </body>
+    </ArtistProvider>
     </MuseumProvider>
 
   );

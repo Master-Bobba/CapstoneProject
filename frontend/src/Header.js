@@ -26,6 +26,9 @@ const Header = () => {
                     <li class="nav__item">
                         <Link className='CreateArt' to="/CreateArt">Create Art</Link>
                     </li>
+                    <li class="nav__item">
+                        <Link className='CreateArtist' to="/CreateArtist">Create Artist</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

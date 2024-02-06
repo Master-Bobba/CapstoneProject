@@ -1,4 +1,4 @@
-.form-card-background{
+.card-background{
     padding: 0.5rem;
     box-shadow: var(--shadow);
     border-radius: 0.5rem;
@@ -7,7 +7,7 @@
     flex-direction: column;
 }
 
-.form-card{
+.card{
     margin: 0.5rem;
     padding: 1.5rem;
     background-color: rgba(255, 255, 255, 0.7);
@@ -19,11 +19,11 @@
     align-items: baseline;
 }
 
-.form-input{
+.card-input{
     margin-left: 20px;
 }
 
-.button {
+.card-button {
     padding: 0.5rem;
     border-radius: 1.5rem;
     min-width: 175px;
@@ -41,13 +41,7 @@
     border: #00100F solid 0.25px;
   }
   
-  .button:hover{
+  .card-button:hover{
     background-color: #FFFFFF;
     transition: ease 0.5s;
-  }
-
-.artistCreatedLabel{
-    color: #85B7B6;
-    /* background-color: #FFFFFF; */
-
   }
