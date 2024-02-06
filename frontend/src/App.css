@@ -69,11 +69,15 @@ body{
 .container {
   max-width: auto;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .main{
   margin-top: none;
   margin-bottom: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .button {
@@ -95,4 +99,11 @@ body{
 .button:hover{
   background-color: #FFFFFF;
   transition: ease 0.5s;
+}
+
+.main-div-layout{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }

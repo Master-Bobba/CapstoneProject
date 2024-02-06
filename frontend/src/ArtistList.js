@@ -1,32 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import DisplayArtist from "./DisplayArtist";
+import { useArtist } from "./ArtistContext";
 
 const ArtistList = () => {
 
-    const [artistData, setArtistData] = useState(null);
-    const endPoint = 'http://localhost:8080/artists';
-    
-    useEffect(() =>{
-        const fetchArtists = async() => {
-            try {
-                setArtistData(
-                    await fetch(endPoint)
-                    .then((response) => response.json())
-                )
-            } catch (error){
-                console.log('Some error fetching artists' + error);
-            }
-        }
-        fetchArtists();
-    }, []);
-
+    const {artistData, setArtistData} = useArtist();
 
     return (
-        <div >
-            { artistData ? (
+        <div>
+            {artistData ? (
                 <div class="display-container">
                     {artistData.map((artist) => (
-                        <DisplayArtist artist= {artist}/>
+                        <DisplayArtist artist={artist} />
                     ))}
                 </div>
             ) : (

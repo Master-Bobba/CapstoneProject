@@ -4,7 +4,7 @@ import MuseumList from "./MuseumList";
 const Museums = () => {
 
     return (
-        <div>
+        <div class="main-div-layout">
             <h3>
                 Museums
             </h3>
