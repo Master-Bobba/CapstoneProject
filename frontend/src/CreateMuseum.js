@@ -1,44 +1,3 @@
-// import React from "react";
-// import './CreateMuseum.css';
-
-// const CreateMuseum = () => {
-//     return (
-//         <form class="card-background">
-//             <div class="card">
-//             <label>
-//               Museum name:
-//               <input
-//                 class="card-input"
-//                 name="name"
-//                 type="text"/>
-//             </label>
-//             <br />
-//             <label>
-//               Curator:
-//               <input
-//                 class="card-input"
-//                 name="curator"
-//                 type="text"/>
-//             </label>
-//             <label>
-//               Location:
-//               <input
-//                 class="card-input"
-//                 name="location"
-//                 type="text"/>
-//             </label>
-//             <br />
-//             <button class="card-button">Submit</button>
-//             </div>
-//           </form>
-//     )
-
-// }
-
-// export default CreateMuseum;
-
-
-
 import React from "react";
 import './Create.css';
 import { useMuseum } from "./MuseumContext";
@@ -48,9 +7,8 @@ const CreateMuseum = () => {
     const { museumData, updateMuseumList } = useMuseum()
 
     const handleSubmit = (event) => {
-        event.preventDefault();
-        const endPoint = process.env.REACT_APP_SPRING_URL + '/museum';
 
+        const endPoint = process.env.REACT_APP_SPRING_URL + '/museum';
         var name = document.querySelector('#museumName').value;
 
         fetch(endPoint, {
@@ -58,14 +16,21 @@ const CreateMuseum = () => {
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify({
                 "name": document.querySelector('#museumName').value,
-                "curator": parseInt(document.querySelector('#curator').value),
-                "location": parseInt(document.querySelector('#location').value)
+                "curator": {
+                    "name": document.querySelector('#curatorName').value,
+                    "yearBorn": parseInt(document.querySelector('#curatorBirthYear').value)
+                },
+                "artList": [],
+                "location": {
+                    "city": document.querySelector('#city').value,
+                    "country": document.querySelector('#country').value
+                }
             })
         });
-        updateMuseumList();
+
         document.getElementById("museumForm").reset();
-        document.getElementById("messageLabel").innerHTML = "Museum " + name + " created";
-        
+        event.preventDefault();
+        document.getElementById("messageLabel").innerHTML = "Museum " + name + " successfully created";
     }
 
     return (
@@ -74,19 +39,29 @@ const CreateMuseum = () => {
                 <div class="form-card">
                     <label>
                     Museum Name: 
-                    <input class="form-input" id= "museumName" name="name" type="text"/>
+                    <input class="form-input" id= "museumName" name="museumName" type="text"/>
                     </label>
-                    <br />
+                    <br/>
                     <label>
-                    Curator:
-                    <input class="form-input" id= "curator" name="curator" type="text"/>
+                    Curator Name:
+                    <input class="form-input" id= "curatorName" name="curatorName" type="text"/>
                     </label>
-                    <br />
+                    <br/>
                     <label>
-                    Location:
-                    <input class="form-input" id= "location" name="location" type="text"/>
+                    Curator Birth Year:
+                    <input class="form-input" id= "curatorBirthYear" name="curatoBirthYear" type="text"/>
                     </label>
-                    <br />
+                    <br/>
+                    <label>
+                    City:
+                    <input class="form-input" id= "city" name="city" type="text"/>
+                    </label>
+                    <br/>
+                    <label>
+                    Country:
+                    <input class="form-input" id= "country" name="country" type="text"/>
+                    </label>
+                    <br/>
                     <button class="button" >Submit</button>
                 </div>
             </form>

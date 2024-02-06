@@ -31,6 +31,7 @@ function App() {
                   <Route path="/Museums" element={<Museums />} />
                   <Route path="/CreateArt" element={<CreateArt />} />
                   <Route path="/CreateArtist" element={<CreateArtist />} />
+                  <Route path="/CreateMusuem" element={<CreateMuseum />} />
                 </Routes>
               </main>
             <Footer />

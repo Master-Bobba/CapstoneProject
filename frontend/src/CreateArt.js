@@ -1,15 +1,13 @@
 import React from "react";
 import './Create.css';
 import ArtistDropdown from "./ArtistDropdown";
+import MuseumDropdown from "./MuseumDropdown";
 
 const CreateArt = () => {
 
   const handleSubmit = (event) => {
-    console.log("Submit button pressed SUCCESSFULLY");
-
+  
     const artStyle = document.querySelector('#artType').value;
-    console.log(artStyle);
-
     const endPoint = process.env.REACT_APP_SPRING_URL + '/' + artStyle;
     
     var name = document.querySelector('#artPiece').value;
@@ -61,18 +59,13 @@ const CreateArt = () => {
               <br />
               <label>
                 Museum:
-                <select class="form-input" id="museum">
-                  <option value="defaultMuseum"></option>
-                  <option value="louvre">10</option>
-                  <option value="accademia">The Accademia Gallery</option>
-                  <option value="vangogh">The Van Gogh Museum</option>
-                </select>
+                <MuseumDropdown />
               </label>
               <br />
               <label>
                 Medium:
                 <select class="form-input" id="medium">
-                  <option value="defaultMedium"></option>
+                  <option value="defaultMedium">-select-</option>
                   <option value="clay">CLAY</option>
                   <option value="marble">MARBLE</option>
                   <option value="steel">STEEL</option>

@@ -4,7 +4,7 @@ const Home = () => {
 
     return(
         <div>
-            Home page under constuction.
+            --== Home page under constuction. ==--
         </div>
     );
 };

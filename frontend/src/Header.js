@@ -5,18 +5,18 @@ import { useArtist } from "./ArtistContext";
 import { useMuseum } from './MuseumContext';
 import { useArt } from './ArtContext';
 
-
-
 const Header = () => {
 
     const { updateArtistList } = useArtist();
     const { updateMuseumList } = useMuseum();
     const { updateArtList } = useArt();
 
-    const handleArtClick = () => { updateArtList(); };
-    const handleArtistsClick = () => { updateArtistList(); };
-    const handleMuseumsClick = () => { updateMuseumList(); };
-    
+    const handleClick = () => { 
+        updateArtList(); 
+        updateArtistList();
+        updateMuseumList();
+    };
+        
     
     return (
         <header class="header">
@@ -26,19 +26,22 @@ const Header = () => {
         <nav>
             <ul class="nav__list">
                 <li class="nav__item">
-                    <Link className='Art' to="/Art" onClick={handleArtClick}>Art </Link>
+                    <Link className='Art' to="/Art" onClick={handleClick}>Art </Link>
                 </li>
                 <li class="nav__item">
-                    <Link className='Artists' to="/Artists" onClick={handleArtistsClick}>Artists</Link>
+                    <Link className='Artists' to="/Artists" onClick={handleClick}>Artists</Link>
                 </li>
                 <li class="nav__item">
-                    <Link className='Museums' to="/Museums" onClick={handleMuseumsClick}>Museums</Link>
+                    <Link className='Museums' to="/Museums" onClick={handleClick}>Museums</Link>
                 </li>
                 <li class="nav__item">
-                    <Link className='CreateArt' to="/CreateArt">Create Art</Link>
+                    <Link className='CreateArt' to="/CreateArt" onClick={handleClick}>Create Art</Link>
                 </li>
                 <li class="nav__item">
-                    <Link className='CreateArtist' to="/CreateArtist">Create Artist</Link>
+                    <Link className='CreateArtist' to="/CreateArtist" onClick={handleClick}>Create Artist</Link>
+                </li>
+                <li class="nav__item">
+                    <Link className='CreateMuseum' to="/CreateMusuem" onClick={handleClick}>Create Museum</Link>
                 </li>
             </ul>
         </nav>

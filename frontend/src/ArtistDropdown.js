@@ -4,12 +4,13 @@ import DisplayArtistDropdown from "./DisplayArtistDropdown";
 
 const ArtistDropdown = () => {
 
-    const {artistData, setArtistData} = useArtist();
+    const {artistData } = useArtist();
 
     return (
         <div >
             {artistData ? (
                 <select class="form-input" id="artist" name="artist">
+                    <option value="defaultArtist">-select-</option>
                     {artistData.map((artist) => (
                         <option>
                         <DisplayArtistDropdown artist={artist} />
