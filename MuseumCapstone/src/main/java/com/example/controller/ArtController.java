@@ -1,9 +1,11 @@
 package com.example.controller;
 
 import com.example.dto.ArtDto;
+import com.example.dto.ArtistDto;
 import com.example.model.*;
 import com.example.service.ArtService;
 import com.example.utils.ArtDtoConverter;
+import com.example.utils.ArtistDtoConverter;
 import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -136,6 +138,20 @@ public class ArtController {
     public void deleteArt(@PathVariable Long id) {
         artService.deleteById(id);
         log.debug("Artist object with id = " + id + " has been deleted.");
+    }
+
+    @GetMapping("/art/search")
+    public List<ArtDto> searchByName(@PathParam("name") String name) {
+
+        List<Art> arts = artService.searchByName(name);
+
+        List<ArtDto> dtos = new ArrayList<>();
+
+        for (Art art:arts
+             ) {
+            dtos.add(ArtDtoConverter.convert(art));
+        }
+        return dtos;
     }
 
 }

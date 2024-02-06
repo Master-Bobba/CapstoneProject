@@ -16,4 +16,6 @@ public interface MuseumService {
     void deleteById(Long id);
 
     Museum save(Museum museum);
+
+    List<Museum> searchByName(String name);
 }

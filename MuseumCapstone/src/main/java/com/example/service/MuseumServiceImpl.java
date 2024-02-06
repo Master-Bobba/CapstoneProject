@@ -84,6 +84,10 @@ public class MuseumServiceImpl implements MuseumService {
         return museumRepository.save(museum);
     }
 
+    @Override
+    public List<Museum> searchByName(String name) {
+        return museumRepository.searchByName(name);
+    }
 
     private long countArtOfStyle(Museum museum, Style style) {
         List<Painting> paintingList = new ArrayList<>();
