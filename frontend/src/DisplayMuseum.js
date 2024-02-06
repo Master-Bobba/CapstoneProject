@@ -1,5 +1,6 @@
 import React from "react";
 import { useMuseum } from "./MuseumContext";
+import louvre from './images/louvre.jpg'
 
 function DisplayMuseum (props) {
     
@@ -21,7 +22,6 @@ function DisplayMuseum (props) {
 
     return (
         <div id={props.museum.id}>
-            {/* <img src="" alt={props.museum.name}></img> */}
             <p>{props.museum.name} [{props.museum.location.city}, {props.museum.location.country}]</p>
             <p> Curator: {props.museum.curator.name} </p>
             <div>
