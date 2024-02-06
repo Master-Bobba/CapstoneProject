@@ -1,11 +1,15 @@
 import React from "react";
 import { useArtist } from "./ArtistContext";
+import { useMuseum } from "./MuseumContext";
+import { useArt } from "./ArtContext";
 
 
 const SearchBar = (props) =>{
 
     const endPoint = process.env.REACT_APP_SPRING_URL + '/' + props.searchFor + '/search?name=';
-    const {artistData, setArtistData } = useArtist();
+    const { setArtistData } = useArtist();
+    const { setMuseumData } = useMuseum();
+    const { setArtData } = useArt();
 
     async function handleSubmit(event){
 
@@ -20,14 +24,15 @@ const SearchBar = (props) =>{
         }catch (error){
             console.log('Some error fetching museums' + error);
         }
+
         document.getElementById("form").reset();
 
         if (props.searchFor === 'artist'){
             setArtistData(response);
         } else if (props.searchFor === 'museum'){
-
+            setMuseumData(response);
         } else if (props.searchFor === 'art'){
-            
+            setArtData(response);
         }
         
     }

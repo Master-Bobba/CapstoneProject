@@ -11,29 +11,32 @@ import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MuseumProvider } from './MuseumContext';
 import { ArtistProvider } from './ArtistContext';
-
-
+import { ArtProvider } from './ArtContext';
+import Home from './Home';
 
 
 function App() {
   return (
     <MuseumProvider>
       <ArtistProvider>
-        <body class="container">
-        <Header />
-        <main class="background main">
-          <Routes>
-            <Route path="/CreateMuseum" element={<CreateMuseum />} />
-            <Route path="/Art" element={<Art />} />
-            <Route path="/Artists" element={<Artists />} />
-            <Route path="/Museums" element={<Museums />} />
-            <Route path="/CreateArt" element={<CreateArt />} />
-            <Route path="/CreateArtist" element={<CreateArtist />} />
-          </Routes>
-      </main>
-      <Footer />
-    </body>
-    </ArtistProvider>
+        <ArtProvider>
+          <body class="container">
+            <Header />
+              <main class="background main">
+                <Routes>
+                  <Route path="/" element={<Home/>} />
+                  <Route path="/CreateMuseum" element={<CreateMuseum />} />
+                  <Route path="/Art" element={<Art />} />
+                  <Route path="/Artists" element={<Artists />} />
+                  <Route path="/Museums" element={<Museums />} />
+                  <Route path="/CreateArt" element={<CreateArt />} />
+                  <Route path="/CreateArtist" element={<CreateArtist />} />
+                </Routes>
+              </main>
+            <Footer />
+          </body>
+        </ArtProvider>
+      </ArtistProvider>
     </MuseumProvider>
 
   );

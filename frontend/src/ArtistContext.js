@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 
-
 const ArtistContext = createContext();
 
 const ArtistProvider = ({ children }) => {
@@ -20,7 +19,7 @@ const ArtistProvider = ({ children }) => {
 
     useEffect(() => {
         updateArtistList();
-    }, []);
+    },[]);
 
     return (
         <ArtistContext.Provider value={{ artistData, updateArtistList, setArtistData }}>

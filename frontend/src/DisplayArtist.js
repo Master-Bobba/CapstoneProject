@@ -32,7 +32,7 @@ function DisplayArtist(props) {
             {props.artist.yearDead === undefined ? (
                 <p>Still Alive</p>
             ) : (
-                <p>Died: {props.artist.yearDead !== undefined}</p>
+                <p>Died: {props.artist.yearDead}</p>
             )}
 
             <div>

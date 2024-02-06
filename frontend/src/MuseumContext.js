@@ -24,7 +24,7 @@ const MuseumProvider = ({children}) => {
     }, []);
 
     return (
-        <MuseumContext.Provider value={{museumData, updateMuseumList}}>
+        <MuseumContext.Provider value={{museumData, updateMuseumList, setMuseumData}}>
             {children}
         </MuseumContext.Provider>
     );

@@ -3,7 +3,8 @@ import ArtistList from "./ArtistList";
 import SearchBar from "./SearchBar";
 
 const Artists = () => {
-       
+
+   
     return (
         <div class="main-div-layout">
             <h1>

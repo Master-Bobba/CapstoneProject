@@ -3,12 +3,9 @@ import { useMuseum } from "./MuseumContext";
 
 function DisplayMuseum (props) {
     
-    // const endPoint = 'http://localhost:8080/museum/';
     const { updateMuseumList } = useMuseum();
 
     const handleDelete = async (event) =>{
-        // document.getElementById(''+props.museum.id).remove();
-        
         try {
             const options = {method:'DELETE'};
             const response = await fetch(process.env.REACT_APP_SPRING_URL + '/museum/' + props.museum.id, options);
@@ -24,7 +21,7 @@ function DisplayMuseum (props) {
 
     return (
         <div id={props.museum.id}>
-            <img src="" alt={props.museum.name}></img>
+            {/* <img src="" alt={props.museum.name}></img> */}
             <p>{props.museum.name} [{props.museum.location.city}, {props.museum.location.country}]</p>
             <p> Curator: {props.museum.curator.name} </p>
             <div>

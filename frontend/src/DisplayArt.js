@@ -1,28 +1,34 @@
 import React from "react";
+import { useArt } from "./ArtContext";
 
-function ArtDisplay(artData) {
+function DisplayArt(props) {
+
+    const { updateArtList } = useArt();
+
+    const handleDelete = async (event) => {
+        try {
+            const options = {method:'DELETE'};
+            const response = await fetch(process.env.REACT_APP_SPRING_URL + '/art/' + props.art.id, options);
+        } catch (error) {
+            console.error('Error fetching data: ', error);
+        }
+        updateArtList();
+    }
+
+    const handleEdit = (event) => {
+        console.log('Render edit component!');
+    }
     
     return (
-    artData ? (
-        <div>
-            <div>
-                {artData.map((art) => (
-                    <div key={art.id}>
-                        <div>
-                        <p>ID: {art.id}</p>
-                        <p>Name: {art.name}</p>
-                        <p>Back story: {art.backStory}</p>
-                        <button>Delete</button>
-                        <button>Edit</button>
-                        </div>
-                    </div>
-                ))}
-            </div>
+        <div id={props.art.id}>
+            <p>Name: {props.art.name}</p>
+            <p>Artist: {props.art.artist.name}</p>
+            <p>Back story: {props.art.backStory}</p>
+            <button id="delete" onClick={(event) => {handleDelete(event)}}>Delete</button>
+            <button id="edit" onClick={(event) => { handleEdit(event)}}>Edit</button>
+
         </div>
-    ) : (
-        <p>Loading...</p>
-    )
-    )
+    );    
 }
 
-export default ArtDisplay;
+export default DisplayArt;

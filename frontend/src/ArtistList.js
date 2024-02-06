@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DisplayArtist from "./DisplayArtist";
 import { useArtist } from "./ArtistContext";
 
 const ArtistList = () => {
 
-    const { artistData } = useArtist();
+    const { artistData, setArtistData } = useArtist();
+
+    
 
     return (
         <div>
