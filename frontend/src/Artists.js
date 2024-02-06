@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ArtistList from "./ArtistList";
+import SearchBar from "./SearchBar";
 
 const Artists = () => {
        
@@ -9,7 +10,8 @@ const Artists = () => {
                 Artists
             </h1>
             <div >
-            <ArtistList />
+                <SearchBar searchFor = "artist"/>
+                <ArtistList />
             </div>
         </div>
     )

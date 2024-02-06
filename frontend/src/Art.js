@@ -2,6 +2,7 @@ import React, { useEffect, useState , useRef} from 'react';
 import ArtDisplay from './DisplayArt';
 import './ArtPieceFraming.css';
 import './App.css';
+import SearchBar from './SearchBar';
 
 const Art = () => {
     const [artData, setArtData] = useState(null);
@@ -71,6 +72,7 @@ const Art = () => {
     return (
         <div class="main-div-layout">
             Art
+            <SearchBar searchFor = "art"/>
             <h1>
                 Here you can view all the Art
             </h1>

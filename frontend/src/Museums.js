@@ -1,5 +1,6 @@
 import React from "react";
 import MuseumList from "./MuseumList";
+import SearchBar from "./SearchBar";
 
 const Museums = () => {
 
@@ -8,6 +9,7 @@ const Museums = () => {
             <h2>
                 Museums
             </h2>
+            <SearchBar searchFor = "museum"/>
             <h3>
                 Select a Museum to view opening hours, address & contact details;
                 purchase tickets; or find out a little more about the art collections.

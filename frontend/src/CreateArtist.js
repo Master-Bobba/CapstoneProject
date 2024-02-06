@@ -1,13 +1,15 @@
 import React from "react";
 import './Create.css';
+import { useArtist } from "./ArtistContext";
 
 const CreateArtist = () => {
 
-    
+    const { artistData, updateArtistList} = useArtist()
 
     const handleSubmit = (event) => {
-        console.log("Submit button pressed SUCCESSFULLY");
+        event.preventDefault();
         const endPoint = process.env.REACT_APP_SPRING_URL + '/artist';
+
         var name = document.querySelector('#artistName').value;
 
         fetch(endPoint, {
@@ -19,9 +21,10 @@ const CreateArtist = () => {
                 "yearDead": parseInt(document.querySelector('#yearDied').value)
             })
         });
+        updateArtistList();
         document.getElementById("artistForm").reset();
-        event.preventDefault();
         document.getElementById("messageLabel").innerHTML = "Artist " + name + " created";
+        
     }
 
     return (
