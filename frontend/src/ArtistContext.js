@@ -6,27 +6,24 @@ const ArtistContext = createContext();
 const ArtistProvider = ({ children }) => {
 
     const [artistData, setArtistData] = useState(null);
-    const endPoint = process.env.REACT_APP_SPRING_URL + '/artists';
-
+ 
     const updateArtistList = async () => {
         try {
             setArtistData(
-                await fetch(endPoint)
-                    .then((response) => response.json())
+                await fetch(process.env.REACT_APP_SPRING_URL + '/artists')
+                .then((response) => response.json())
             )
-            console.log(artistData)
         } catch (error) {
             console.log('Some error fetching artists' + error);
         }
     };
 
     useEffect(() => {
-        console.log(process.env.REACT_APP_SPRING_URL)
         updateArtistList();
     }, []);
 
     return (
-        <ArtistContext.Provider value={{ artistData, updateArtistList }}>
+        <ArtistContext.Provider value={{ artistData, updateArtistList, setArtistData }}>
             {children}
         </ArtistContext.Provider>
     );

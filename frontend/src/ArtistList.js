@@ -4,7 +4,7 @@ import { useArtist } from "./ArtistContext";
 
 const ArtistList = () => {
 
-    const {artistData, setArtistData} = useArtist();
+    const { artistData } = useArtist();
 
     return (
         <div>

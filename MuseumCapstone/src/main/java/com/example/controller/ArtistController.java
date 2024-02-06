@@ -47,6 +47,7 @@ public class ArtistController {
             }
             dtos.add(ArtistDtoConverter.convert(artist, d));
         }
+        log.debug("Fetching all artists");
         return dtos;
     }
 
