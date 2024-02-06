@@ -5,13 +5,13 @@ const Museums = () => {
 
     return (
         <div class="main-div-layout">
-            <h3>
+            <h2>
                 Museums
-            </h3>
-            <h5>
+            </h2>
+            <h3>
                 Select a Museum to view opening hours, address & contact details;
-                purchase ticket; or find out a little more about the art collections.
-            </h5>
+                purchase tickets; or find out a little more about the art collections.
+            </h3>
             <MuseumList />
         </div>
         
