@@ -6,7 +6,11 @@ const CreateArt = () => {
 
   const handleSubmit = (event) => {
     console.log("Submit button pressed SUCCESSFULLY");
-    const endPoint = process.env.REACT_APP_SPRING_URL + '/sculpture';
+
+    const artStyle = document.querySelector('#artType').value;
+    console.log(artStyle);
+
+    const endPoint = process.env.REACT_APP_SPRING_URL + '/' + artStyle;
     
     var name = document.querySelector('#artPiece').value;
 
@@ -38,6 +42,13 @@ const CreateArt = () => {
       <div>
           <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
             <div class="form-card">
+            <label>
+                Art Form:
+                <select class="form-input" id="artType">
+                  <option value="sculpture">Sculpture</option>
+                  <option value="painting">Painting</option>
+                </select>
+              </label>
               <label>
                 Art Piece: 
                 <input class="form-input" id="artPiece" name="name" type="text"/>
