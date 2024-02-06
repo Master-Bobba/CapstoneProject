@@ -1,9 +1,11 @@
 package com.example.controller;
 
+import com.example.dto.ArtDto;
 import com.example.dto.MuseumDto;
 import com.example.model.*;
 import com.example.service.ArtistService;
 import com.example.service.MuseumService;
+import com.example.utils.ArtDtoConverter;
 import com.example.utils.MuseumDtoConverter;
 import io.micrometer.common.util.StringUtils;
 import jakarta.websocket.server.PathParam;
@@ -80,6 +82,21 @@ public class MuseumController {
     @PutMapping ("/museum")
     public Museum updatingMuseum(@RequestBody Museum museum){
         return museumService.save(museum);
+    }
+
+
+    @GetMapping("/museum/search")
+    public List<MuseumDto> searchByName(@PathParam("name") String name) {
+
+        List<Museum> museums = museumService.searchByName(name);
+
+        List<MuseumDto> dtos = new ArrayList<>();
+
+        for (Museum museum:museums
+        ) {
+            dtos.add(MuseumDtoConverter.convert(museum));
+        }
+        return dtos;
     }
 
 }
