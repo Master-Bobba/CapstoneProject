@@ -8,7 +8,7 @@
 
 .display-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: space-between;
     margin-top: 20px;
     margin-bottom: 0px;
