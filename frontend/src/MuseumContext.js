@@ -20,7 +20,6 @@ const MuseumProvider = ({children}) => {
     };
 
     useEffect(() =>{
-        console.log(process.env.REACT_APP_SPRING_URL)
         updateMuseumList();
     }, []);
 

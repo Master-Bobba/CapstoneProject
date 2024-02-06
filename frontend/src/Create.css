@@ -45,3 +45,9 @@
     background-color: #FFFFFF;
     transition: ease 0.5s;
   }
+
+.artistCreatedLabel{
+    color: #85B7B6;
+    /* background-color: #FFFFFF; */
+
+  }
