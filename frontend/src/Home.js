@@ -1,7 +1,7 @@
 import React, { useEffect, useState }  from "react";
-import Carousel from "react-bootstrap/Carousel";
+// import Carousel from "react-bootstrap/Carousel";
 
-const images = require.context('./CarouselImages', true);
+// const images = require.context('./CarouselImages', true);
 // const imageList = images.keys().map(image => images(image));
 
 const Home = () => {
@@ -23,25 +23,28 @@ const Home = () => {
     );
 
     return(
+        <div>
+            -- HOME PAGE CAROUSEL UNDER CONSTRUCTION --
+        </div>
         
-        artData ? (
-            <div>
-                <Carousel>
-                {artData.map((art) => (
-                    <Carousel.Item>
-                        <div key={art.id}>
-                            <div>
-                            <p>Title: {art.name}</p>
-                            <img src= {art.url} height={300} width={500} />
-                            </div>
-                        </div>
-                    </Carousel.Item>
-                    ))}
-                </Carousel>
-            </div>
-        ) : (
-            <p>Loading...</p>
-        )
+        // artData ? (
+        //     <div>
+        //         <Carousel>
+        //         {artData.map((art) => (
+        //             <Carousel.Item>
+        //                 <div key={art.id}>
+        //                     <div>
+        //                     <p>Title: {art.name}</p>
+        //                     <img src= {art.url} height={300} width={500} />
+        //                     </div>
+        //                 </div>
+        //             </Carousel.Item>
+        //             ))}
+        //         </Carousel>
+        //     </div>
+        // ) : (
+        //     <p>Loading...</p>
+        // )
     );
 };
 
