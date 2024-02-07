@@ -47,6 +47,15 @@ const CreateArt = () => {
 
     return (
       <div class="main-div-layout">
+        <section class="page_title">
+                <h2 class="page-title__header">
+                    Colleague Hub - New Art Form
+                </h2>
+                <h3 class="page-title__text">
+                    Use the form below to add new paintings and sculptures to the museum database.
+                </h3>
+            </section>
+        <div class="main-div-layout">
           <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
             <div class="form-card">
             <label>
@@ -111,6 +120,7 @@ const CreateArt = () => {
           </form>
           <div>
             <label class="artCreatedLabel" id="artMessageLabel"></label>
+          </div>
           </div>
         </div>
     )

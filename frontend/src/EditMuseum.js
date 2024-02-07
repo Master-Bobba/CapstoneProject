@@ -52,6 +52,15 @@ const EditMuseum = () => {
 
     return (
         <div class="main-div-layout">
+        <section class="page_title">
+                <h2 class="page-title__header">
+                    Colleague Hub - Museum Management Form
+                </h2>
+                <h3 class="page-title__text">
+                    Use the form below to update existing museums within the museum database.
+                </h3>
+            </section>
+        <div class="main-div-layout">
             <form class="form-card-background" id="museumForm" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="form-card">
                     <label>
@@ -79,12 +88,13 @@ const EditMuseum = () => {
                     <input class="form-input" id= "country" name="country" type="text"/>
                     </label>
                     <br/>
-                    <button class="button" >Submit</button>
+                    <button class="button" >Update</button>
                 </div>
             </form>
             <div>
                 <label class="museumCreatedLabel" id="messageLabel"></label>
             </div>
+        </div>
         </div>
     );
 };

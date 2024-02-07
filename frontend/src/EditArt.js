@@ -37,7 +37,16 @@ const EditArt = (props) => {
     });
 
     return (
-        <div>
+      <div class="main-div-layout">
+        <section class="page_title">
+                <h2 class="page-title__header">
+                    Colleague Hub - Art Management Form
+                </h2>
+                <h3 class="page-title__text">
+                    Use the form below to edit existing paintings and sculptures within the museum database.
+                </h3>
+            </section>
+        <div class="main-div-layout">
             <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
               <div class="form-card">
               <label>
@@ -97,12 +106,13 @@ const EditArt = (props) => {
                   <input class="form-input" id="backStory" name="backStory" type="text"/>
                 </label>
                 <br />
-                <button class="button">Submit</button>
+                <button class="button">Update</button>
                 </div>
             </form>
             <div>
               <label class="artCreatedLabel" id="artMessageLabel"></label>
             </div>
+          </div>
           </div>
       );
 };

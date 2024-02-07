@@ -36,6 +36,15 @@ const CreateMuseum = () => {
 
     return (
         <div class="main-div-layout">
+        <section class="page_title">
+                <h2 class="page-title__header">
+                    Colleague Hub - New Museum Form
+                </h2>
+                <h3 class="page-title__text">
+                    Use the form below to add new museums to the museum database.
+                </h3>
+            </section>
+        <div class="main-div-layout">
             <form class="form-card-background" id="museumForm" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="form-card">
                     <label>
@@ -69,6 +78,7 @@ const CreateMuseum = () => {
             <div>
                 <label class="museumCreatedLabel" id="messageLabel"></label>
             </div>
+        </div>
         </div>
     );
 
