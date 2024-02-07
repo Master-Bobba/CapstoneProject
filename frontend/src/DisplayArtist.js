@@ -1,12 +1,14 @@
 import React from "react";
 import './display.css';
 import { useArtist } from "./ArtistContext";
+import { useNavigate, navigation } from "react-router-dom";
 
 
 
 function DisplayArtist(props) {
 
     const { updateArtistList } = useArtist();
+    const navigate = useNavigate();
 
     const handleDelete = async (event) => {
 
@@ -19,8 +21,8 @@ function DisplayArtist(props) {
         updateArtistList();
     }
 
-    const handleEdit = (event) => {
-        console.log("Render Edit component");
+    const handleEdit = (event, artist) => {
+        navigate("/EditArtist", { state: artist });
     }
 
 
@@ -47,7 +49,7 @@ function DisplayArtist(props) {
                 ) : (
                     <p> No art pieces yet </p>
                 )}
-                <button id="edit" onClick={(event) => { handleEdit(event) }}> Edit </button>
+                <button id="edit" onClick={(event) => { handleEdit(event, props.artist) }}> Edit </button>
                 <button id="delete" onClick={(event) => { handleDelete(event) }}> Delete </button>
             </div>
         </div>
