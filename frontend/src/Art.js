@@ -7,10 +7,10 @@ const Art = () => {
     return(
         <div class="main-div-layout">
             <section class="page_title">
-                <h2>
+                <h2 class="page-title__header">
                     Art
                 </h2>
-                <h3>
+                <h3 class="page-title__text">
                     Explore our extensive art collections below
                 </h3>
                 <SearchBar searchFor = "art"/>
