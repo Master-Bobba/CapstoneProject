@@ -1,9 +1,12 @@
 import React from "react";
+import './display.css';
 import { useArt } from "./ArtContext";
+import { useNavigate } from "react-router-dom";
 
 function DisplayArt(props) {
 
     const { updateArtList } = useArt();
+    const navigate = useNavigate();
 
     const handleDelete = async (event) => {
         try {
@@ -15,8 +18,9 @@ function DisplayArt(props) {
         updateArtList();
     }
 
-    const handleEdit = (event) => {
+    const handleEdit = (event, art) => {
         console.log('Render edit component!');
+        navigate("/EditArt", { state: art });
     }
     
     return (
@@ -24,9 +28,8 @@ function DisplayArt(props) {
             <p>Name: {props.art.name}</p>
             <p>Artist: {props.art.artist.name}</p>
             <p>Back story: {props.art.backStory}</p>
+            <button id="edit" onClick={(event) => { handleEdit(event, props.art)}}>Edit</button>
             <button id="delete" onClick={(event) => {handleDelete(event)}}>Delete</button>
-            <button id="edit" onClick={(event) => { handleEdit(event)}}>Edit</button>
-
         </div>
     );    
 }
