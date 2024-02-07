@@ -34,8 +34,6 @@ const EditArt = (props) => {
         document.getElementById(art.medium).selected = true;
         document.getElementById('yearCompleted').value = art.yearCompleted;
         document.getElementById('backStory').value = art.backStory;
-        // document.getElementById('yearDied').value = artist.yearDead;
-
     });
 
     return (

@@ -7,9 +7,11 @@ import { useArt } from "./ArtContext";
 const SearchBar = (props) =>{
 
     const endPoint = process.env.REACT_APP_SPRING_URL + '/' + props.searchFor + '/search?name=';
-    const { setArtistData } = useArtist();
-    const { setMuseumData } = useMuseum();
-    const { setArtData } = useArt();
+    const { setArtistData, updateArtistList } = useArtist();
+    const { setMuseumData, updateMuseumList } = useMuseum();
+    const { setArtData, updateArtList } = useArt();
+
+    const placeholderText = "Search for " + props.searchFor + "...";
 
     async function handleSubmit(event){
 
@@ -25,7 +27,7 @@ const SearchBar = (props) =>{
             console.log('Some error fetching museums' + error);
         }
 
-        document.getElementById("form").reset();
+        // document.getElementById("form").reset();
 
         if (props.searchFor === 'artist'){
             setArtistData(response);
@@ -34,7 +36,17 @@ const SearchBar = (props) =>{
         } else if (props.searchFor === 'art'){
             setArtData(response);
         }
-        
+    }
+
+    const handleClear = (event)=> {
+        if (props.searchFor === 'artist'){
+            updateArtistList();
+        } else if (props.searchFor === 'museum'){
+            updateMuseumList();
+        } else if (props.searchFor === 'art'){
+            updateArtList();
+        }
+        document.getElementById("form").reset();
     }
 
     return (
@@ -42,11 +54,12 @@ const SearchBar = (props) =>{
             <form class="form-card-background" id="form" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="form-card">
                     <label>
-                        Search for {props.searchFor}:
-                        <input class="form-input" id= "artistName" name="name" type="text"/>
+                        {/* Search for {props.searchFor}: */}
+                        <input class="form-input" id= "artistName" name="name" type="text" placeholder={placeholderText} />
                     </label>
                     <br />
                     <button class="button" >Submit</button>
+                    <button class="button" onClick={(event) => {handleClear(event)}}>Clear</button>
                 </div>
             </form>
             <div>
