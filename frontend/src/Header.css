@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px 16px;
     background-color: #072F2E;
     margin: 0;
     color: #85B7B6;
@@ -14,8 +14,13 @@
     font-weight: bold;
     font-size: 35px;
     text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
  }
-   
+
+.nav{
+   align-items: center;
+}
 .nav__list {
    display: flex;
    list-style-type: none;
@@ -23,6 +28,8 @@
    align-items: center;
    text-decoration: none;
    color: #85B7B6;
+   justify-items: center;
+   margin-bottom: 0;
 }
    
 .nav__item {

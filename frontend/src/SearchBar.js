@@ -56,7 +56,7 @@ const SearchBar = (props) =>{
         <div >
             <form class="page_search__controls" id="form" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="search-bar">
-                    <label>
+                    <label class="search-bar__label">
                         {/* Search for {props.searchFor}: */}
                         <input class="search-bar__input" id= "artistName" name="name" type="text" placeholder={placeholderText} />
                     </label>
