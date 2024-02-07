@@ -20,8 +20,8 @@ public class ArtDto {
     private Long id;
     private String name;
 
-    @JsonIgnore
     private String type;
+
     private ArtistDto artist;
 
     @Enumerated(value = EnumType.STRING)
@@ -35,13 +35,25 @@ public class ArtDto {
     @Enumerated(value = EnumType.STRING)
     private Style style;
 
-    public ArtDto(Long id, String name, Medium medium, MuseumDto museum, int yearCompleted, String backStory) {
+    public ArtDto(Long id, String name, Medium medium, MuseumDto museum, int yearCompleted, String backStory,String type) {
         this.id = id;
         this.name = name;
         this.medium = medium;
         this.museum = museum;
         this.yearCompleted = yearCompleted;
         this.backStory = backStory;
+        this.type = type;
+    }
+
+    public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, String backStory,String type) {
+        this.id = id;
+        this.name = name;
+        this.artist = artist;
+        this.medium = medium;
+        this.museum = museum;
+        this.yearCompleted = yearCompleted;
+        this.backStory = backStory;
+        this.type = type;
     }
 
     public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, String backStory) {
@@ -52,16 +64,7 @@ public class ArtDto {
         this.museum = museum;
         this.yearCompleted = yearCompleted;
         this.backStory = backStory;
-    }
-
-    public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, String backStory, Style style) {
-        this.id = id;
-        this.name = name;
-        this.artist = artist;
-        this.medium = medium;
-        this.museum = museum;
-        this.yearCompleted = yearCompleted;
-        this.backStory = backStory;
         this.style = style;
+        this.type = "Painting";
     }
 }

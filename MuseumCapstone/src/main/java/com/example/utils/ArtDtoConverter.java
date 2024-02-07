@@ -9,20 +9,20 @@ public class ArtDtoConverter {
     public static ArtDto convert(Art art) {
         return new ArtDto(art.getId(), art.getName(), ArtistDtoConverter.convert(art.getArtist()),
                 art.getMedium(), MuseumDtoConverter.convertOnlyName(art.getMuseum()),
-                art.getYearCompleted(), art.getBackStory());
+                art.getYearCompleted(), art.getBackStory(),art.getArtType());
     }
 
     public static ArtDto convertWithoutArtist(Art art) {
         return new ArtDto(art.getId(), art.getName(),
                 art.getMedium(), MuseumDtoConverter.convertOnlyName(art.getMuseum()),
-                art.getYearCompleted(), art.getBackStory());
+                art.getYearCompleted(), art.getBackStory(),art.getArtType());
     }
 
 
     public static ArtDto convert(Painting painting) {
         return new ArtDto(painting.getId(), painting.getName(), ArtistDtoConverter.convert(painting.getArtist()),
                 painting.getMedium(), MuseumDtoConverter.convertOnlyName(painting.getMuseum()),
-                painting.getYearCompleted(), painting.getBackStory(),painting.getStyle());
+                painting.getYearCompleted(), painting.getBackStory());
     }
 
 
