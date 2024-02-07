@@ -50,4 +50,13 @@ public abstract class Art {
 
     private int yearCompleted;
     private String backStory;
+
+    @Column(name = "art_type", insertable = false, updatable = false)
+    private String artType;
+
+    @JsonProperty("art_type")
+    public String getArtType() {
+        return artType;
+    }
+
 }
