@@ -26,6 +26,8 @@ public abstract class Art {
     private Long id;
     private String name;
 
+    private String url;
+
     public Art(Long id, String name, Artist artist, Medium medium, Museum museum, int yearCompleted, String backStory) {
         this.id = id;
         this.name = name;
