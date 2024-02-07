@@ -21,7 +21,6 @@ public class ArtistDto {
 
     private List<ArtDto> artList;
 
-
     public ArtistDto(Long id, String name) {
         this.id = id;
         this.name = name;

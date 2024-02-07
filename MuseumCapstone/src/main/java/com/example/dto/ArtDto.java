@@ -35,7 +35,9 @@ public class ArtDto {
     @Enumerated(value = EnumType.STRING)
     private Style style;
 
-    public ArtDto(Long id, String name, Medium medium, MuseumDto museum, int yearCompleted, String backStory,String type) {
+    private String url;
+
+    public ArtDto(Long id, String name, Medium medium, MuseumDto museum, int yearCompleted, String backStory, String type, String url) {
         this.id = id;
         this.name = name;
         this.medium = medium;
@@ -43,9 +45,10 @@ public class ArtDto {
         this.yearCompleted = yearCompleted;
         this.backStory = backStory;
         this.type = type;
+        this.url = url;
     }
 
-    public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, String backStory,String type) {
+    public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, String backStory, String type, String url) {
         this.id = id;
         this.name = name;
         this.artist = artist;
@@ -54,9 +57,10 @@ public class ArtDto {
         this.yearCompleted = yearCompleted;
         this.backStory = backStory;
         this.type = type;
+        this.url = url;
     }
 
-    public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, String backStory) {
+    public ArtDto(Long id, String name, ArtistDto artist, Medium medium, MuseumDto museum, int yearCompleted, Style style, String backStory, String url) {
         this.id = id;
         this.name = name;
         this.artist = artist;
@@ -66,5 +70,6 @@ public class ArtDto {
         this.backStory = backStory;
         this.style = style;
         this.type = "Painting";
+        this.url = url;
     }
 }
