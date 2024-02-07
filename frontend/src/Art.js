@@ -6,11 +6,16 @@ const Art = () => {
 
     return(
         <div class="main-div-layout">
-            <h1>
-                Art
-            </h1>
-            <div class="main-div-layout">
+            <section class="page_title">
+                <h2>
+                    Art
+                </h2>
+                <h3>
+                    Explore our extensive art collections below
+                </h3>
                 <SearchBar searchFor = "art"/>
+            </section>
+            <div class="main-div-layout">
                 <ArtList />
             </div>
         </div>

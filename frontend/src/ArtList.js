@@ -7,7 +7,7 @@ const ArtList = () => {
     const { artData } = useArt();
 
     return(
-        <div>
+        <div class="main-div-layout">
             { artData ? (
                 <div class="display-container">
                     {artData.map((art) => (

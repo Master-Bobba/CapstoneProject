@@ -9,7 +9,7 @@ const MuseumList = () => {
     return (
         <div class="main-div-layout">
             { museumData ? (
-                <div>
+                <div class="display-container">
                     {museumData.map((museum) => (
                         <DisplayMuseum museum = { museum }/>
                     ))}
