@@ -47,32 +47,42 @@ const CreateMuseum = () => {
         <div class="main-div-layout">
             <form class="form-card-background" id="museumForm" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="form-card">
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Museum Name: 
                     <input class="form-input" id= "museumName" name="museumName" type="text"/>
+                    </div>
                     </label>
                     <br/>
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Curator Name:
                     <input class="form-input" id= "curatorName" name="curatorName" type="text"/>
+                    </div>
                     </label>
                     <br/>
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Curator Birth Year:
                     <input class="form-input" id= "curatorBirthYear" name="curatoBirthYear" type="text"/>
+                    </div>
                     </label>
                     <br/>
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     City:
                     <input class="form-input" id= "city" name="city" type="text"/>
+                    </div>
                     </label>
                     <br/>
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Country:
                     <input class="form-input" id= "country" name="country" type="text"/>
+                    </div>
                     </label>
                     <br/>
-                    <button class="button" >Submit</button>
+                    <button class="button create-form-button" >Submit</button>
                 </div>
             </form>
             <div>

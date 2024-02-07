@@ -7,7 +7,8 @@ const MuseumDropdown = () => {
     const { museumData } = useMuseum();
 
     return(
-        <div >
+        <div class="form-label-styling">
+            Museum:
             { museumData ? (
                 <select class="form-input" id="museum" name="museum">
                     <option value="defaultMuseum">-select-</option>

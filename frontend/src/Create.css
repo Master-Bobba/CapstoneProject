@@ -5,6 +5,7 @@
     margin-top: 30px;
     display: flex;
     flex-direction: column;
+    width: 80%;
 }
 
 .form-card{
@@ -19,8 +20,20 @@
     align-items: baseline;
 }
 
+.form-label-styling-width{
+  width: 100%;
+}
+.form-label-styling{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .form-input{
     margin-left: 20px;
+    width: 75%;
+    
 }
 
 .button {
@@ -32,8 +45,8 @@
     transition: background-color 150ms;
     text-align: center;
     cursor: pointer;
-    background-color: #017481;
-    color: #00100F;
+    background-color: #00100F;
+    color: #017481;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -42,8 +55,13 @@
   }
   
   .button:hover{
-    background-color: #FFFFFF;
+    background-color: #017481;
+    color: #00100F;
     transition: ease 0.5s;
+  }
+
+  .create-form-button{
+    width: 100%;
   }
 
 .artistCreatedLabel{

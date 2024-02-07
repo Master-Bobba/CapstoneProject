@@ -4,6 +4,8 @@ import './Header.css';
 import { useArtist } from "./ArtistContext";
 import { useMuseum } from './MuseumContext';
 import { useArt } from './ArtContext';
+import account from './images/account.svg';
+import groupLogoTwo from './images/groupLogoTwo.svg';
 
 const Header = () => {
 
@@ -21,7 +23,8 @@ const Header = () => {
     return (
         <header class="header">
         <h2 class="header__logo">
-            <Link id='homeButton' to="/">The Capstone Museum Group</Link> 
+
+            <Link id='homeButton' to="/"><img class="groupLogo" src={ groupLogoTwo }/>       The Capstone Museum Group</Link> 
         </h2>
         <nav class="nav">
             <ul class="nav__list">
@@ -42,6 +45,9 @@ const Header = () => {
                 </li>
                 <li class="nav__item">
                     <Link class="nav__item__text" className='CreateMuseum' to="/CreateMusuem" onClick={handleClick}>Create Museum</Link>
+                </li>
+                <li class="nav__item">
+                    <Link class="nav__item__text" className='CreateMuseum' to="/CreateMusuem" onClick={handleClick}><img class="nav__svg-logo" src={ account }/></Link>
                 </li>
             </ul>
         </nav>

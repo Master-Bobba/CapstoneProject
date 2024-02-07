@@ -58,14 +58,18 @@ const CreateArt = () => {
         <div class="main-div-layout">
           <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
             <div class="form-card">
-            <label>
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
                 Art Form:
                 <select class="form-input" id="artType">
                   <option value="sculpture">Sculpture</option>
                   <option value="painting">Painting</option>
                 </select>
+                </div>
               </label>
-              <label>
+              <br />
+              <label class="form-label-styling-width">
+              <div class="form-label-styling">
                 Style:
                 <select class="form-input" id="style">
                   <option value="defaultStyle">-select-</option>
@@ -75,24 +79,26 @@ const CreateArt = () => {
                   <option value="renaissance">RENAISSANCE</option>
                   <option value="romanticism">ROMANTICISM</option>
                 </select>
+                </div>
               </label>
               <br />
-              <label>
+              <label class="form-label-styling-width">
+              <div class="form-label-styling">
                 Art Piece: 
                 <input class="form-input" id="artPiece" name="name" type="text"/>
+                </div>
               </label>
               <br />
-              <label>
-                Artist:
+              <label class="form-label-styling-width">
                 <ArtistDropdown />
               </label>
               <br />
-              <label>
-                Museum:
+              <label class="form-label-styling-width">
                 <MuseumDropdown />
               </label>
               <br />
-              <label>
+              <label class="form-label-styling-width">
+              <div class="form-label-styling">
                 Medium:
                 <select class="form-input" id="medium">
                   <option value="defaultMedium">-select-</option>
@@ -103,19 +109,24 @@ const CreateArt = () => {
                   <option value="oil">OIL</option>
                   <option value="watercolour">WATERCOLOUR</option>
                 </select>
+                </div>
               </label>
               <br />
-              <label>
+              <label class="form-label-styling-width">
+              <div class="form-label-styling">
                 Year Completed:
                 <input class="form-input" id="yearCompleted" name="yearCompleted" type="text"/>
+              </div>
               </label>
               <br />
-              <label>
+              <label class="form-label-styling-width">
+              <div class="form-label-styling">
                 Back Story:
                 <input class="form-input" id="backStory" name="backStory" type="text"/>
+                </div>
               </label>
               <br />
-              <button class="button">Submit</button>
+              <button class="button create-form-button">Submit</button>
               </div>
           </form>
           <div>

@@ -23,7 +23,7 @@ function DisplayMuseum (props) {
     }
 
     return (
-        <div id={props.museum.id}>
+        <div id={props.museum.id} class="MuseumCard">
             <img src={louvre} height="40px" alt={props.museum.name}></img>
             <p>{props.museum.name} [{props.museum.location.city}, {props.museum.location.country}]</p>
             <p> Curator: {props.museum.curator.name} </p>

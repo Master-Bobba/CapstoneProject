@@ -40,22 +40,28 @@ const CreateArtist = () => {
         <div class="main-div-layout">
             <form class="form-card-background" id="artistForm" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="form-card">
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Artist Name: 
                     <input class="form-input" id= "artistName" name="name" type="text"/>
+                    </div>
                     </label>
                     <br />
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Year Born:
                     <input class="form-input" id= "yearBorn" name="yearborn" type="text"/>
+                    </div>
                     </label>
                     <br />
-                    <label>
+                    <label class="form-label-styling-width">
+                    <div class="form-label-styling">
                     Year Died:
                     <input class="form-input" id= "yearDied" name="yeardied" type="text"/>
+                    </div>
                     </label>
                     <br />
-                    <button class="button" >Submit</button>
+                    <button class="button create-form-button" >Submit</button>
                 </div>
             </form>
             <div>

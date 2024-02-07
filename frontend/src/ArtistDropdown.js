@@ -7,7 +7,8 @@ const ArtistDropdown = () => {
     const {artistData } = useArtist();
 
     return (
-        <div >
+        <div class="form-label-styling">
+            Artist: 
             {artistData ? (
                 <select class="form-input" id="artist" name="artist">
                     <option value="defaultArtist">-select-</option>
