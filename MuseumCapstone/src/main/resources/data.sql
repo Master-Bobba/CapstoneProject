@@ -16,8 +16,8 @@ INSERT INTO museum (id, name, curator_id, location_id) VALUES (11, 'Accademia Ga
 INSERT INTO museum (id, name, curator_id, location_id) VALUES (12, 'Van Gogh Museum', 12, 12);
 
 INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Painting', 10, 'Mona Lisa', 10, 'OIL', 10, 1503, 'Mona Lisa story.....', 'RENAISSANCE');
-INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Sculpture', 11, 'Dying Slave', 11, 'MARBLE', 10, 1516, 'Dying Slave story....', 'RENAISSANCE');
-INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Sculpture', 12, 'David', 11, 'MARBLE', 11, 1504, 'David....', 'RENAISSANCE');
+INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Sculpture', 11, 'Dying Slave', 11, 'MARBLE', 10, 1516, 'Dying Slave story....', null);
+INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Sculpture', 12, 'David', 11, 'MARBLE', 11, 1504, 'David....', null);
 INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Painting', 13, 'Self-Portrait as a Painter', 12, 'OIL', 12, 1888, 'story....', 'IMPRESSIONIST');
 INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Painting', 14, 'The Yellow House', 12, 'OIL', 12, 1888, 'yellow house....', 'IMPRESSIONIST');
 INSERT INTO art (art_type, id, name, artist_id, medium, museum_id, year_completed, back_story, style) VALUES ('Painting', 15, 'Liberty Leading the People', 13, 'OIL', 10, 1830, 'Liberty Leading the People.....', 'ROMANTICISM');

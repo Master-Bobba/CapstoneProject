@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @RestController
@@ -34,9 +35,15 @@ public class ArtController {
 
         List<ArtDto> dto = new ArrayList<>();
 
-        for (Art art : artService.findAll()) {
-            dto.add(ArtDtoConverter.convert(art));
+        for (Painting painting : artService.findAllPaintings()) {
+            dto.add(ArtDtoConverter.convert(painting));
         }
+
+        for (Sculpture sculpture : artService.findAllSculptures()) {
+            dto.add(ArtDtoConverter.convert(sculpture));
+        }
+
+        dto.sort(Comparator.comparingLong(ArtDto::getId));
 
         log.debug("Fetching all art");
         return dto;
