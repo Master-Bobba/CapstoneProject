@@ -1,0 +1,71 @@
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { useArtist } from "./ArtistContext";
+
+
+const EditArtist = () => {
+
+    const { updateArtistList } = useArtist();
+    const location = useLocation();
+    const artist = location.state;
+
+    useEffect(()=>{
+
+        document.getElementById('artistName').value = artist.name;
+        document.getElementById('yearBorn').value = artist.yearBorn;
+        document.getElementById('yearDied').value = artist.yearDead;
+
+    },[]);
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const endPoint = process.env.REACT_APP_SPRING_URL + '/artist';
+
+        fetch(endPoint, {
+            method: 'put',
+            headers: {'Content-Type' : 'application/json'},
+            body: JSON.stringify({
+                "id": artist.id,
+                "name": document.querySelector('#artistName').value,
+                "yearBorn": parseInt(document.querySelector('#yearBorn').value),
+                "yearDead": parseInt(document.querySelector('#yearDied').value)
+            })
+        });
+        updateArtistList();
+        document.getElementById("artistForm").reset();
+        document.getElementById("messageLabel").innerHTML = "Artist Successfully Updated.";
+        
+    }
+
+    return (
+        <div class="main-div-layout">
+            <form class="form-card-background" id="artistForm" onSubmit={(event) => { handleSubmit(event)}}>
+                <div class="form-card">
+                    <label>
+                    Artist Name: 
+                    <input class="form-input" id= "artistName" name="name" type="text"/>
+                    </label>
+                    <br />
+                    <label>
+                    Year Born:
+                    <input class="form-input" id= "yearBorn" name="yearborn" type="text"/>
+                    </label>
+                    <br />
+                    <label>
+                    Year Died:
+                    <input class="form-input" id= "yearDied" name="yeardied" type="text"/>
+                    </label>
+                    <br />
+                    <button class="button" >Submit</button>
+                </div>
+            </form>
+            <div>
+                <label class="artistCreatedLabel" id="messageLabel"></label>
+            </div>
+        </div>
+    );  
+
+};
+
+export default EditArtist;
