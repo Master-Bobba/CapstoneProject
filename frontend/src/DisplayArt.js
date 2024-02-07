@@ -19,7 +19,6 @@ function DisplayArt(props) {
     }
 
     const handleEdit = (event, art) => {
-        console.log('Render edit component!');
         navigate("/EditArt", { state: art });
     }
     
