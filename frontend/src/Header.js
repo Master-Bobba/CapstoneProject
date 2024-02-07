@@ -23,7 +23,7 @@ const Header = () => {
         <h2 class="header__logo">
             <Link id='homeButton' to="/">The Capstone Museum Group</Link> 
         </h2>
-        <nav>
+        <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item">
                     <Link class="nav__item__text" className='Art' to="/Art" onClick={handleClick}>Art </Link>

@@ -5,10 +5,27 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <footer class="footer">
-            <nav>
-                &#169; Copyright 2024
-            </nav>
-        </footer>
+        <div class="footer__nav-section">
+          <div class="footer__nav-section__list">
+            <span class="white-text">Help & Information</span>
+            <ul class="footer-list">
+              <li class="footer-list__item"><a class="footer__nav__item" href="#">Opening Hours & Locations</a></li>
+              <li><a class="footer__nav__item" href="#">Donate</a></li>
+              <li><a class="footer__nav__item" href="#">FAQs</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-section__list">
+            <span class="white-text">About The Capstone Museum Group</span>
+            <ul>
+              <li><a class="footer__nav__item" href="#">About Us</a></li>
+              <li><a class="footer__nav__item" href="#">Corporate Responsibility</a></li>
+            </ul>
+          </div>
+        </div>
+        <section class="footer__copyright-section">
+          <p class="copyright-text">&#169; 2024 The Capstone Museum Group</p>
+        </section>
+      </footer>
     )
 }
 

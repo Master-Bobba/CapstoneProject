@@ -40,6 +40,15 @@ const EditArtist = () => {
 
     return (
         <div class="main-div-layout">
+        <section class="page_title">
+                <h2 class="page-title__header">
+                    Colleague Hub - Artist Management Form
+                </h2>
+                <h3 class="page-title__text">
+                    Use the form below to edit existing artists within the museum database.
+                </h3>
+        </section>
+        <div class="main-div-layout">
             <form class="form-card-background" id="artistForm" onSubmit={(event) => { handleSubmit(event)}}>
                 <div class="form-card">
                     <label>
@@ -57,12 +66,13 @@ const EditArtist = () => {
                     <input class="form-input" id= "yearDied" name="yeardied" type="text"/>
                     </label>
                     <br />
-                    <button class="button" >Submit</button>
+                    <button class="button" >Update</button>
                 </div>
             </form>
             <div>
                 <label class="artistCreatedLabel" id="messageLabel"></label>
             </div>
+        </div>
         </div>
     );  
 

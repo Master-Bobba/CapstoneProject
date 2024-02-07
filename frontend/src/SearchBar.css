@@ -29,6 +29,7 @@
     justify-content: left;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
 
   }
   
@@ -42,8 +43,16 @@
     padding: 0 24px;
     font-size: 18px;
     justify-content: space-between;
+    justify-items: center;
+    align-items: center;
   }
   
+  .search-bar__label{
+    border: none;
+    background-color: transparent;
+    width: 90%;
+  }
+
   .search-bar__input{
     border: none;
     background-color: transparent;

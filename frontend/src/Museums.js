@@ -6,17 +6,19 @@ const Museums = () => {
 
     return (
         <div class="main-div-layout">
-            <section>
-                <h2>
-                    Museums
+            <section class="page_title">
+                <h2 class="page-title__header">
+                Museums
                 </h2>
-                <h3>
+                <h3 class="page-title__text">
                     Select a Museum to view opening hours, address & contact details;
-                    purchase tickets; or find out a little more about the art collections.
+                    purchase tickets; or, find out a little more about the art collections.
                 </h3>
+                <SearchBar searchFor = "museum"/>
             </section>
-            <SearchBar searchFor = "museum"/>
-            <MuseumList />
+            <div class="main-div-layout">
+                <MuseumList />
+            </div>
         </div>
         
     );
