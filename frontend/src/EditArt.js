@@ -21,8 +21,12 @@ const EditArt = (props) => {
         console.log(art.medium);
         console.log(document.getElementById(art.medium).selected)
 
-        // document.getElementById('artType').value = artist.name;
-        // document.getElementById('style').option = 
+        document.getElementById(art.type).selected = true;
+        { art.style ? (
+          document.getElementById(art.style).selected = true
+        ) : (
+          console.log("No style yet!")
+        )}
         document.getElementById('artPiece').value = art.name;
         document.getElementById('artist').value = art.artist.name;
         {art.museum ? (
@@ -30,7 +34,6 @@ const EditArt = (props) => {
         ): (
             console.log("No Museum yet!")
         )}
-        
         document.getElementById(art.medium).selected = true;
         document.getElementById('yearCompleted').value = art.yearCompleted;
         document.getElementById('backStory').value = art.backStory;
@@ -43,8 +46,8 @@ const EditArt = (props) => {
               <label>
                   Art Form:
                   <select class="form-input" id="artType">
-                    <option value="sculpture">Sculpture</option>
-                    <option value="painting">Painting</option>
+                    <option value="sculpture" id="Sculpture">Sculpture</option>
+                    <option value="painting" id="Painting">Painting</option>
                   </select>
                 </label>
                 <label>
