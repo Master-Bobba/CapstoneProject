@@ -1,4 +1,5 @@
 import React from "react";
+import './display.css';
 import { useArt } from "./ArtContext";
 
 function DisplayArt(props) {
@@ -20,7 +21,7 @@ function DisplayArt(props) {
     }
     
     return (
-        <div id={props.art.id}>
+        <div id={props.art.id} class="ArtistCard">
             <p>Name: {props.art.name}</p>
             <p>Artist: {props.art.artist.name}</p>
             <p>Back story: {props.art.backStory}</p>

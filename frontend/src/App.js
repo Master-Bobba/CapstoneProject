@@ -22,7 +22,7 @@ function App() {
     <MuseumProvider>
       <ArtistProvider>
         <ArtProvider>
-          <body class="container">
+          <div class="container">
             <Header />
               <main class="background main">
                 <Routes>
@@ -39,7 +39,7 @@ function App() {
                 </Routes>
               </main>
             <Footer />
-          </body>
+          </div>
         </ArtProvider>
       </ArtistProvider>
     </MuseumProvider>
