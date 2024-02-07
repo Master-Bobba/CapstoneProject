@@ -11,23 +11,47 @@ const EditArt = (props) => {
     const { updateArtList } = useArt();
     const location = useLocation();
     const art = location.state;
+    // console.log(document.querySelector('#Painting').value)
+    // const artStyle = document.querySelector('#artType').value;
+    const endPoint = process.env.REACT_APP_SPRING_URL + '/' + art.type.toLowerCase();
+    // var name = document.querySelector('#artPiece').value;
+    console.log(endPoint);
+    
 
 
     const handleSubmit = (event) => {
-    //   fetch(endPoint, {
-    //     method: 'put',
-    //     headers: {'Content-Type' : 'application/json'},
-    //     body: JSON.stringify({
-    //         "id": art.id,
-    //         "name": document.querySelector('#artPiece').value,
-    //         "artist": {"id": selectedIdArtist},
-    //         "medium": document.querySelector('#medium').value.toUpperCase(),
-    //         "museum": {"id": selectedIdMuseum},
-    //         "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
-    //         "backStory": document.querySelector('#backStory').value,
-    //         "style": document.querySelector('#style').value.toUpperCase()
-    //     })
-    // });
+
+      const selectElementArtist = document.querySelector('#artist.form-input');
+      const selectedIndexArtist = selectElementArtist.selectedIndex;
+      const selectedOptionArtist = selectElementArtist.options[selectedIndexArtist];
+      const selectedIdArtist = selectedOptionArtist.querySelector('p').getAttribute('id');
+      console.log('Selected Artist id:', selectedIdArtist);
+
+      const selectElementMuseum = document.querySelector('#museum.form-input');
+      const selectedIndexMuseum = selectElementMuseum.selectedIndex;
+      const selectedOptionMuseum = selectElementMuseum.options[selectedIndexMuseum];
+      const selectedIdMuseum = selectedOptionMuseum.querySelector('p').getAttribute('id');
+      console.log('Selected Museum id:', selectedIdMuseum);
+
+      fetch(endPoint, {
+        method: 'put',
+        headers: {'Content-Type' : 'application/json'},
+        body: JSON.stringify({
+            "id": art.id,
+            "name": document.querySelector('#artPiece').value,
+            "artist": {"id": selectedIdArtist},
+            "medium": document.querySelector('#medium').value.toUpperCase(),
+            "museum": {"id": selectedIdMuseum},
+            "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
+            "backStory": document.querySelector('#backStory').value,
+            "style": document.querySelector('#style').value.toUpperCase(),
+            "url": document.querySelector('#url').value
+        })
+    });
+
+    document.getElementById("artForm").reset();
+    event.preventDefault();
+    document.getElementById("artMessageLabel").innerHTML =  art.name + " successfully updated";
 
     }
 
@@ -49,6 +73,7 @@ const EditArt = (props) => {
       document.getElementById(art.medium).selected = true;
       document.getElementById('yearCompleted').value = art.yearCompleted;
       document.getElementById('backStory').value = art.backStory;
+      document.getElementById('url').value = art.url;
     });
 
     return (
@@ -119,6 +144,11 @@ const EditArt = (props) => {
                 <label>
                   Back Story:
                   <input class="form-input" id="backStory" name="backStory" type="text"/>
+                </label>
+                <br />
+                <label>
+                  URL:
+                  <input class="form-input" id="url" name="url" type="text"/>
                 </label>
                 <br />
                 <button class="button">Update</button>

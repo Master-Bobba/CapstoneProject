@@ -36,7 +36,8 @@ const CreateArt = () => {
             "museum": {"id": selectedIdMuseum},
             "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
             "backStory": document.querySelector('#backStory').value,
-            "style": document.querySelector('#style').value.toUpperCase()
+            "style": document.querySelector('#style').value.toUpperCase(),
+            "url": document.querySelector('#url').value
         })
     });
     
@@ -113,6 +114,11 @@ const CreateArt = () => {
               <label>
                 Back Story:
                 <input class="form-input" id="backStory" name="backStory" type="text"/>
+              </label>
+              <br />
+              <label>
+                URL:
+                <input class="form-input" id="url" name="url" type="text"/>
               </label>
               <br />
               <button class="button">Submit</button>
