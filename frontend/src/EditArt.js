@@ -14,29 +14,41 @@ const EditArt = (props) => {
 
 
     const handleSubmit = (event) => {
+    //   fetch(endPoint, {
+    //     method: 'put',
+    //     headers: {'Content-Type' : 'application/json'},
+    //     body: JSON.stringify({
+    //         "id": art.id,
+    //         "name": document.querySelector('#artPiece').value,
+    //         "artist": {"id": selectedIdArtist},
+    //         "medium": document.querySelector('#medium').value.toUpperCase(),
+    //         "museum": {"id": selectedIdMuseum},
+    //         "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
+    //         "backStory": document.querySelector('#backStory').value,
+    //         "style": document.querySelector('#style').value.toUpperCase()
+    //     })
+    // });
 
     }
 
     useEffect(() => {
-        console.log(art.medium);
-        console.log(document.getElementById(art.medium).selected)
 
-        document.getElementById(art.type).selected = true;
-        { art.style ? (
-          document.getElementById(art.style).selected = true
-        ) : (
-          console.log("No style yet!")
-        )}
-        document.getElementById('artPiece').value = art.name;
-        document.getElementById('artist').value = art.artist.name;
-        {art.museum ? (
-            document.getElementById('museum').value = art.museum.name
-        ): (
-            console.log("No Museum yet!")
-        )}
-        document.getElementById(art.medium).selected = true;
-        document.getElementById('yearCompleted').value = art.yearCompleted;
-        document.getElementById('backStory').value = art.backStory;
+      document.getElementById(art.type).selected = true;
+      { art.style ? (
+        document.getElementById(art.style).selected = true
+      ) : (
+        console.log("No style yet!")
+      )}
+      document.getElementById('artPiece').value = art.name;
+      document.getElementById('artist').value = art.artist.name;
+      {art.museum ? (
+          document.getElementById('museum').value = art.museum.name
+      ): (
+          console.log("No Museum yet!")
+      )}
+      document.getElementById(art.medium).selected = true;
+      document.getElementById('yearCompleted').value = art.yearCompleted;
+      document.getElementById('backStory').value = art.backStory;
     });
 
     return (
