@@ -2,6 +2,9 @@ import React from "react";
 import { useArtist } from "./ArtistContext";
 import { useMuseum } from "./MuseumContext";
 import { useArt } from "./ArtContext";
+import refresh from './images/refresh.svg';
+import search from './images/search.svg';
+import './SearchBar.css';
 
 
 const SearchBar = (props) =>{
@@ -50,21 +53,20 @@ const SearchBar = (props) =>{
     }
 
     return (
-        <div class="main-div-layout">
-            <form class="form-card-background" id="form" onSubmit={(event) => { handleSubmit(event)}}>
-                <div class="form-card">
+        <div >
+            <form class="page_search__controls" id="form" onSubmit={(event) => { handleSubmit(event)}}>
+                <div class="search-bar">
                     <label>
                         {/* Search for {props.searchFor}: */}
-                        <input class="form-input" id= "artistName" name="name" type="text" placeholder={placeholderText} />
+                        <input class="search-bar__input" id= "artistName" name="name" type="text" placeholder={placeholderText} />
                     </label>
                     <br />
-                    <button class="button" >Submit</button>
-                    <button class="button" onClick={(event) => {handleClear(event)}}>Clear</button>
+                    <div>
+                    <button class="search-bar__button"><img class="nav__svg-logo" src={ search }/></button>
+                    <button class="search-bar__button" onClick={(event) => {handleClear(event)}}><img class="nav__svg-logo" src={ refresh }/></button>
+                    </div>
                 </div>
             </form>
-            <div>
-                <label class="artistCreatedLabel" id="messageLabel"></label>
-            </div>
         </div>
     );
 
