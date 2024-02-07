@@ -9,7 +9,7 @@ const ArtList = () => {
     return(
         <div>
             { artData ? (
-                <div>
+                <div class="display-container">
                     {artData.map((art) => (
                         <DisplayArt art = { art } />
                     ))}

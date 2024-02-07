@@ -6,11 +6,13 @@ const Art = () => {
 
     return(
         <div class="main-div-layout">
-            <h3>
-                Museums
-            </h3>
-            <SearchBar searchFor = "art"/>
-            <ArtList />
+            <h1>
+                Art
+            </h1>
+            <div class="main-div-layout">
+                <SearchBar searchFor = "art"/>
+                <ArtList />
+            </div>
         </div>
 
     );
