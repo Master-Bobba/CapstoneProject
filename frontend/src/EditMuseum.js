@@ -34,7 +34,6 @@ const EditMuseum = () => {
                     "name": document.querySelector('#curatorName').value,
                     "yearBorn": parseInt(document.querySelector('#curatorBirthYear').value)
                 },
-                "artList": museum.artList,
                 "location": {
                     "id": museum.location.id,
                     "city": document.querySelector('#city').value,
