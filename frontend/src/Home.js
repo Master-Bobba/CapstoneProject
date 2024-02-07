@@ -1,9 +1,9 @@
 import React, { useEffect, useState }  from "react";
-import Carousel from "react-bootstrap/Carousel";
-import louvre from "./images/louvre.jpg";
+//import Carousel from "react-bootstrap/Carousel";
+// import louvre from "./images/louvre.jpg";
 
-const images = require.context('./CarouselImages', true);
-const imageList = images.keys().map(image => images(image));
+// const images = require.context('./CarouselImages', true);
+// const imageList = images.keys().map(image => images(image));
 
 const Home = () => {
     const [artData, setArtData] = useState(null);
@@ -24,24 +24,27 @@ const Home = () => {
     );
 
     return(
-        artData ? (
-            <div>
-                <Carousel>
-                {artData.map((art) => (
-                    <Carousel.Item>
-                        <div key={art.id}>
-                            <div>
-                            <p>Title: {art.name}</p>
-                            <img src= {art.url} height={300} width={500} />
-                            </div>
-                        </div>
-                    </Carousel.Item>
-                    ))}
-                </Carousel>
-            </div>
-        ) : (
-            <p>Loading...</p>
-        )
+        <div>
+
+        </div>
+        //artData ? (
+            //<div>
+                //<Carousel>
+                //{artData.map((art) => (
+                    //<Carousel.Item>
+                        //<div key={art.id}>
+                            //<div>
+                            //<p>Title: {art.name}</p>
+                            //<img src= {art.url} height={300} width={500} />
+                            //</div>
+                        //</div>
+                    //</Carousel.Item>
+                    //))}
+                //</Carousel>
+            //</div>
+        //) : (
+            //<p>Loading...</p>
+        //)
     );
 };
 
