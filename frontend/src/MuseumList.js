@@ -7,7 +7,7 @@ const MuseumList = () => {
     const { museumData, setMuseumData} = useMuseum();
 
     return (
-        <div>
+        <div class="main-div-layout">
             { museumData ? (
                 <div>
                     {museumData.map((museum) => (

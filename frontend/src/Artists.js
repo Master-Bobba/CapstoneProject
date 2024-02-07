@@ -10,7 +10,7 @@ const Artists = () => {
             <h1>
                 Artists
             </h1>
-            <div >
+            <div class="main-div-layout">
                 <SearchBar searchFor = "artist"/>
                 <ArtistList />
             </div>
