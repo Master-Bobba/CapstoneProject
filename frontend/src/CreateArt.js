@@ -46,7 +46,7 @@ const CreateArt = () => {
 }
 
     return (
-      <div>
+      <div class="main-div-layout">
           <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
             <div class="form-card">
             <label>

@@ -1,7 +1,7 @@
 import React from "react";
 import './display.css';
 import { useArtist } from "./ArtistContext";
-import { useNavigate, navigation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 

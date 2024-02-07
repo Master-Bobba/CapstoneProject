@@ -1,10 +1,12 @@
 import React from "react";
 import { useMuseum } from "./MuseumContext";
-import louvre from './images/louvre.jpg'
+import louvre from './images/louvre.jpg';
+import { useNavigate } from "react-router-dom";
 
 function DisplayMuseum (props) {
     
     const { updateMuseumList } = useMuseum();
+    const navigate = useNavigate();
 
     const handleDelete = async (event) =>{
         try {
@@ -16,8 +18,8 @@ function DisplayMuseum (props) {
         updateMuseumList();
     }
 
-    const handleEdit = (event) => {
-        console.log("Render Edit component");
+    const handleEdit = (event, museum) => {
+        navigate("/EditMuseum", { state: museum });
     }
 
     return (
@@ -36,7 +38,7 @@ function DisplayMuseum (props) {
                     <p> No art pieces yet </p>
                 )}
             </div>
-            <button id="edit" onClick={(event) => { handleEdit(event)}}> Edit </button>
+            <button id="edit" onClick={(event) => { handleEdit(event, props.museum)}}> Edit </button>
             <button id="delete" onClick={(event) => {handleDelete(event)}}> Delete </button>
         </div>
     );
