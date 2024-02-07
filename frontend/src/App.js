@@ -14,6 +14,7 @@ import { ArtistProvider } from './ArtistContext';
 import { ArtProvider } from './ArtContext';
 import Home from './Home';
 import EditArtist from './EditArtist';
+import EditMuseum from './EditMuseum';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
                   <Route path="/CreateArtist" element={<CreateArtist />} />
                   <Route path="/CreateMusuem" element={<CreateMuseum />} />
                   <Route path="/EditArtist" element={<EditArtist /> } />
+                  <Route path="/EditMuseum" element={<EditMuseum /> } />
                 </Routes>
               </main>
             <Footer />

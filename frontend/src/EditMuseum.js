@@ -1,27 +1,42 @@
-import React from "react";
-import './Create.css';
+import React, { useEffect} from "react";
 import { useMuseum } from "./MuseumContext";
+import { useLocation } from "react-router-dom";
 
-const CreateMuseum = () => {
+const EditMuseum = () => {
 
-    const { museumData, updateMuseumList } = useMuseum()
 
-    const handleSubmit = (event) => {
+    const { updateMuseumList } = useMuseum();
+    const location = useLocation();
+    const museum = location.state;
 
+    useEffect(()=>{
+
+        document.getElementById('museumName').value = museum.name;
+        document.getElementById('curatorName').value = museum.curator.name;
+        document.getElementById('curatorBirthYear').value = museum.curator.yearBorn;
+        document.getElementById('city').value = museum.location.city;
+        document.getElementById('country').value = museum.location.country;
+
+    },[]);
+
+
+    const handleSubmit = (event) =>{
         const endPoint = process.env.REACT_APP_SPRING_URL + '/museum';
-        var name = document.querySelector('#museumName').value;
-
+        
         fetch(endPoint, {
-            method: 'post',
+            method: 'put',
             headers: {'Content-Type' : 'application/json'},
             body: JSON.stringify({
+                "id": museum.id,
                 "name": document.querySelector('#museumName').value,
                 "curator": {
+                    "id": museum.curator.id,
                     "name": document.querySelector('#curatorName').value,
                     "yearBorn": parseInt(document.querySelector('#curatorBirthYear').value)
                 },
-                "artList": [],
+                "artList": museum.artList,
                 "location": {
+                    "id": museum.location.id,
                     "city": document.querySelector('#city').value,
                     "country": document.querySelector('#country').value
                 }
@@ -31,7 +46,8 @@ const CreateMuseum = () => {
 
         document.getElementById("museumForm").reset();
         event.preventDefault();
-        document.getElementById("messageLabel").innerHTML = "Museum " + name + " successfully created";
+        document.getElementById("messageLabel").innerHTML = "Museum Successfully Updated";
+
     }
 
     return (
@@ -71,8 +87,6 @@ const CreateMuseum = () => {
             </div>
         </div>
     );
-
 };
 
-export default CreateMuseum;
-
+export default EditMuseum;
