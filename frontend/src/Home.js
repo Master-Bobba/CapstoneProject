@@ -1,9 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-const images = require.context('./CarouselImages', true);
-const imageList = images.keys().map(image => images(image));
-
 const Home = () => {
     const [artData, setArtData] = useState(null);
 
