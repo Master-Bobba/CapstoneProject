@@ -1,10 +1,8 @@
 import React from "react";
 import './AboutUs.css';
-import ERD from './images/ERDDSL.jpg';
 
 const AboutUs = () => {
     return (
-        <div class="main-div-layout">
         <div class="main-div-layout" >
             <div>
             <h2 className="teamHeader">
@@ -50,10 +48,6 @@ const AboutUs = () => {
                 </li>
             </ul>
             </div>
-        </div>
-        <div class="main-div-layout">
-            <img src={ERD} />
-        </div>
         </div>
     )
 };
