@@ -1,7 +1,9 @@
 import React from "react";
 import { useMuseum } from "./MuseumContext";
 import louvre from './images/louvre.jpg';
+import louvre4 from './images/louvre4.jpeg';
 import { useNavigate } from "react-router-dom";
+import './display.css';
 
 function DisplayMuseum (props) {
     
@@ -24,22 +26,27 @@ function DisplayMuseum (props) {
 
     return (
         <div id={props.museum.id} class="MuseumCard">
-            <img src={louvre} height="40px" alt={props.museum.name}></img>
-            <p>{props.museum.name} [{props.museum.location.city}, {props.museum.location.country}]</p>
-            <p> Curator: {props.museum.curator.name} </p>
-            <div>
-                { props.museum.artList ? (
-                    <ul>
-                        {props.museum.artList.map((art) =>(
-                            <li>{art.name} by {art.artist.name}</li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p> No art pieces yet </p>
-                )}
+            <img src={louvre4} class="imgMuseum" alt={props.museum.name}></img>
+            <div class="polaroid">
+                <p class="line" >{props.museum.name} [{props.museum.location.city}, {props.museum.location.country}]</p>
+                <p class="line" > Curator: {props.museum.curator.name} </p>
+                <div>
+                    { props.museum.artList ? (
+                        <ul>
+                            {props.museum.artList.map((art) =>(
+                                <li class="line" >{art.name} by {art.artist.name}</li>
+                            ))}
+                        </ul >
+                    ) : (
+                        <p class="line" > No art pieces yet </p>
+                    )}
+                </div>
             </div>
-            <button id="edit" onClick={(event) => { handleEdit(event, props.museum)}}> Edit </button>
-            <button id="delete" onClick={(event) => {handleDelete(event)}}> Delete </button>
+            
+            <div class="buttons">
+                <button class="buttonArt" id="edit" onClick={(event) => { handleEdit(event, props.museum)}}> Edit </button>
+                <button class="buttonArt" id="delete" onClick={(event) => {handleDelete(event)}}> Delete </button>
+            </div>
         </div>
     );
 };
