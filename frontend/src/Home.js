@@ -28,7 +28,7 @@ const Home = () => {
                         <div key={art.id}>
                             <div>
                             <p>Title: {art.name}</p>
-                            <img src= {art.url} height={300} width={500} />
+                            <img src= {art.url} width={500} />
                             </div>
                         </div>
                     </Carousel.Item>
