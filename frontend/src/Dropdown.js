@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom';
 import { useArtist } from "./ArtistContext";
 import { useMuseum } from './MuseumContext';
 import { useArt } from './ArtContext';
+import MenuItems from "./MenuItems";
 
-const Dropdown = ({ submenus, dropdown }) => {
+const Dropdown = ({ submenus, dropdown, depthLevel }) => {
+
+    depthLevel = depthLevel + 1;
+    const dropdownClass = depthLevel > 1 ? "dropdown-submenu" : "";
 
     const { updateArtistList } = useArtist();
     const { updateMuseumList } = useMuseum();
@@ -17,12 +21,9 @@ const Dropdown = ({ submenus, dropdown }) => {
     };
 
     return (
-      <ul class={`dropdown ${dropdown ? "show" : ""}`}>
+      <ul class={`dropdown ${dropdownClass} ${dropdown ? "show" : ""}`}>
         {submenus.map((submenu, index) => (
-          <li key={index} class="menu-items">
-            <Link class="nav__item__text" className={submenu.title} to={submenu.url} onClick={handleClick}>{submenu.title}</Link>
-
-          </li>
+          <MenuItems items={submenu} key={index} depthLevel={depthLevel} />
         ))}
       </ul>
     );
