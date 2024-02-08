@@ -1,8 +1,10 @@
 .title{
-    color: #85B7B6;
+    color: black;
     font-size: large;
     text-align: center;
     font-style: italic;
+    text-shadow: white 1px 0 10px;
+    font-weight: bold;
 }
 .mainContent{
     text-align: center;

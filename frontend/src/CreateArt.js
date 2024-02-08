@@ -153,6 +153,7 @@ const CreateArt = () => {
         </form>
         <div>
           <label class="artCreatedLabel" id="createArtMessageLabel"></label>
+
         </div>
       </div>
     </div>

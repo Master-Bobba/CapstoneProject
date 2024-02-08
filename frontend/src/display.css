@@ -30,11 +30,13 @@
 .img{
     width: 100%;
     height: 300px;
+    border-radius: 30px 30px 0 0 ;
     
 }
 .imgMuseum{
     width: 100%;
     height: 300px;
+    border-radius: 30px 30px 0 0 ;
     
 }
 .line{
@@ -53,6 +55,9 @@ div.polaroid {
     margin-bottom: 25px;
     border-spacing: 10px;
     min-height: 110px;
+    padding: 20px 10px 10px 10px;
+    border-radius: 0 0 30px 30px;
+
 }
 
 .display-container{
