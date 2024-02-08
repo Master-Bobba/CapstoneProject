@@ -1,0 +1,24 @@
+.title{
+    color: #85B7B6;
+    font-size: large;
+    text-align: center;
+    font-style: italic;
+}
+.mainContent{
+    text-align: center;
+    vertical-align:middle;
+}
+
+.frontText{
+    color: #85B7B6;
+    text-align: center;
+}
+
+.welcome{
+    color: #85B7B6;
+    text-align: center;
+    min-height: 120px;
+    max-height: 120px;
+    vertical-align: super;
+    margin-top: 50px;
+}
