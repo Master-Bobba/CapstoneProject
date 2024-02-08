@@ -18,13 +18,12 @@
     margin-bottom: 10px;
  }
 
-
-
  .desktop-nav .menus {
    display: flex;
    align-items: center;
    flex-wrap: wrap;
    list-style: none;
+   margin-bottom: 0;
  }
 
  .desktop-nav .menu-items {
