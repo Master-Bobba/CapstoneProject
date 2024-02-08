@@ -24,12 +24,17 @@ function DisplayArt(props) {
     
     return (
         <div id={props.art.id} class="ArtistCard">
-            <p>Name: {props.art.name}</p>
-            <p>Artist: {props.art.artist.name}</p>
-            <p>Back story: {props.art.backStory}</p>
-            <button id="edit" onClick={(event) => { handleEdit(event, props.art)}}>Edit</button>
-            <button id="delete" onClick={(event) => {handleDelete(event)}}>Delete</button>
-        </div>
+            <img src={props.art.url} class="img"></img>
+            <div class="polaroid">
+                <p class="line"> {props.art.name}, {props.art.artist.name} </p>
+                <p class="line">Displayed in {props.art.museum.name}</p>
+                <p class="line">{props.art.backStory}</p>
+            </div>
+            <div class="buttons">
+                <button class="buttonArt" id="edit" onClick={(event) => { handleEdit(event, props.art)}}>Edit</button>
+                <button class="buttonArt" id="delete" onClick={(event) => {handleDelete(event)}}>Delete</button>
+            </div>
+       </div>
     );    
 }
 
