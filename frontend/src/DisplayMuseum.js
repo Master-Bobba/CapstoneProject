@@ -38,8 +38,6 @@ function DisplayMuseum (props) {
                     <p> No art pieces yet </p>
                 )}
             </div>
-            <button id="edit" onClick={(event) => { handleEdit(event, props.museum)}}> Edit </button>
-            <button id="delete" onClick={(event) => {handleDelete(event)}}> Delete </button>
         </div>
     );
 };
