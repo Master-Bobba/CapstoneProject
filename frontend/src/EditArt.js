@@ -57,7 +57,7 @@ const EditArt = (props) => {
 
     useEffect(() => {
 
-      document.getElementById(art.type).selected = true;
+      // document.getElementById(art.type).selected = true;
       { art.style ? (
         document.getElementById(art.style).selected = true
       ) : (
@@ -90,11 +90,11 @@ const EditArt = (props) => {
             <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
               <div class="form-card">
               <label>
-                  Art Form:
+                  {/* Art Form:
                   <select class="form-input" id="artType">
                     <option value="sculpture" id="Sculpture">Sculpture</option>
                     <option value="painting" id="Painting">Painting</option>
-                  </select>
+                  </select> */}
                 </label>
                 <label>
                   Style:
