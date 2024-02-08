@@ -19,6 +19,7 @@ const Header = () => {
             <ul>
               <li><a class="footer__nav__item" href="#">About Us</a></li>
               <li><a class="footer__nav__item" href="#">Corporate Responsibility</a></li>
+              <li><a class="footer__nav__item" href="#">ERD</a></li>
             </ul>
           </div>
         </div>

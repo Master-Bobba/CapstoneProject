@@ -6,51 +6,17 @@ import { useMuseum } from './MuseumContext';
 import { useArt } from './ArtContext';
 import account from './images/account.svg';
 import groupLogoTwo from './images/groupLogoTwo.svg';
+import Navbar from './Navbar'
 
 const Header = () => {
-
-    const { updateArtistList } = useArtist();
-    const { updateMuseumList } = useMuseum();
-    const { updateArtList } = useArt();
-
-    const handleClick = () => { 
-        updateArtList(); 
-        updateArtistList();
-        updateMuseumList();
-    };
-        
-    
+          
     return (
         <header class="header">
         <h2 class="header__logo">
-
             <Link id='homeButton' to="/"><img class="groupLogo" src={ groupLogoTwo }/>       The Capstone Museum Group</Link> 
         </h2>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='Art' to="/Art" onClick={handleClick}>Art </Link>
-                </li>
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='Artists' to="/Artists" onClick={handleClick}>Artists</Link>
-                </li>
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='Museums' to="/Museums" onClick={handleClick}>Museums</Link>
-                </li>
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='CreateArt' to="/CreateArt" onClick={handleClick}>Create Art</Link>
-                </li>
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='CreateArtist' to="/CreateArtist" onClick={handleClick}>Create Artist</Link>
-                </li>
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='CreateMuseum' to="/CreateMusuem" onClick={handleClick}>Create Museum</Link>
-                </li>
-                <li class="nav__item">
-                    <Link class="nav__item__text" className='CreateMuseum' to="/CreateMusuem" onClick={handleClick}><img class="nav__svg-logo" src={ account }/></Link>
-                </li>
-            </ul>
-        </nav>
+        <Navbar />
+        
     </header>
     )
 }
