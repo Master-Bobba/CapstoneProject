@@ -1,12 +1,14 @@
 import React from "react";
 import './AboutUs.css';
+import './ArtPieceFraming.css';
 
 const AboutUs = () => {
     return (
-        <div class="main-div-layout" >
-            <div>
+        <div class="techTeamContainer" >
+            <div class="main-div-layout frameArt">
+            <div class="AboutUsText">
             <h2 className="teamHeader">
-                Our team:
+                The Team:
             </h2>
             <ul className="teamList">
                 <li>
@@ -26,11 +28,13 @@ const AboutUs = () => {
                 </li>
             </ul>
             </div>
-            <div class="main-div-layout">
+            </div>
+            <div class="main-div-layout  frameArt">
+            <div class="AboutUsText">
             <h2 className="techHeader">
-                Our tech stack:
+                Tech Stack:
             </h2>
-            <ul className="techList">
+            <ul className="teamList">
                 <li>
                     Database: MySQL
                 </li>
@@ -47,6 +51,7 @@ const AboutUs = () => {
                     Hosting: AWS
                 </li>
             </ul>
+            </div>
             </div>
         </div>
     )

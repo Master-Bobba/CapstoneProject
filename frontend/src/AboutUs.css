@@ -1,26 +1,60 @@
 .teamHeader {
-    background-color: antiquewhite;
+    font-weight: bold;
+    color: #85B7B6;
 }
 
 .techHeader {
-    background-color: antiquewhite;
+    font-weight: bold;
+    color: #85B7B6;
 }
 
-.teamList{
-    background-color: aliceblue;
+.teamList {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0 0 0 0;
+    font-weight: bold;
+    color: #85B7B6;
+    font-size: 15px;
 }
 
-.techList{
-    background-color: aliceblue;
+.teamList li{
+    text-decoration: none;
 }
 
 .techTeamContainer {
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    max-height: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    margin-top: 100px;
 }
 
 .imageContainer {
     margin-top: 20px;
+}
+
+.AboutUsText{
+    background-color: #072F2E;
+    padding: 20px 20px 20px 20px;
+    height: 100%;
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+}
+
+.erdDiagram{
+    margin-top: 100px;
+
+}
+
+.erdDiagramBorder{
+    border:solid 20px #85B7B6;
 }
