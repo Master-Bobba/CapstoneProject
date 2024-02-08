@@ -147,7 +147,7 @@ const EditArt = (props) => {
               <div class="form-label-styling">
                 Medium:
                 <select class="form-input" id="medium">
-                  <option value="defaultMedium">-select-</option>
+                  <option value="other">-select-</option>
                   <option value="clay" id="CLAY">CLAY</option>
                   <option value="marble" id="MARBLE">MARBLE</option>
                   <option value="steel" id="STEEL">STEEL</option>
