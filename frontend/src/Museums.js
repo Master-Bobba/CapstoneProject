@@ -11,8 +11,7 @@ const Museums = () => {
                 Museums
                 </h2>
                 <h3 class="page-title__text">
-                    Select a Museum to view opening hours, address & contact details;
-                    purchase tickets; or, find out a little more about the art collections.
+                    View our Museums below
                 </h3>
                 <SearchBar searchFor = "museum"/>
             </section>

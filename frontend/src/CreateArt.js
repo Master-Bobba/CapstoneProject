@@ -151,7 +151,7 @@ const CreateArt = () => {
             <button class="button create-form-button">Submit</button>
           </div>
         </form>
-        <div>
+        <div class="artCreatedLabel">
           <label class="artCreatedLabel" id="artMessageLabel"></label>
         </div>
       </div>

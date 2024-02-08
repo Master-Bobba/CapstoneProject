@@ -57,4 +57,5 @@
 
 .erdDiagramBorder{
     border:solid 20px #85B7B6;
+    border-radius: 30px 30px 30px 30px;
 }
