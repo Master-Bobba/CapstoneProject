@@ -16,7 +16,7 @@ import Home from './Home';
 import EditArtist from './EditArtist';
 import EditMuseum from './EditMuseum';
 import EditArt from './EditArt';
-
+import AboutUs from './AboutUs';
 
 function App() {
   return (
@@ -38,6 +38,7 @@ function App() {
                   <Route path="/EditArtist" element={<EditArtist /> } />
                   <Route path="/EditMuseum" element={<EditMuseum /> } />
                   <Route path="/EditArt" element={<EditArt /> } />
+                  <Route path="/AboutUs" element={<AboutUs />} />
                 </Routes>
               </main>
             <Footer />
