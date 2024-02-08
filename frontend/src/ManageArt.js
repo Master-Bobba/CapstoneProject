@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import ArtList from "./ArtList";
+import ManageArtList from "./ManageArtList";
 
 const ManageArt = () => {
 
@@ -16,7 +16,7 @@ const ManageArt = () => {
                 <SearchBar searchFor = "art"/>
             </section>
             <div class="main-div-layout">
-                <ArtList />
+                <ManageArtList />
             </div>
         </div>
 
