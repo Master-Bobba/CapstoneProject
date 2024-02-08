@@ -20,6 +20,7 @@ import AboutUs from './AboutUs';
 import ManageArt from './ManageArt';
 import ManageArtists from './ManageArtists';
 import ManageMuseums from './ManageMuseums';
+import EntityRelationshipDiagram from './Erd';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
                   <Route path="/ManageArt" element={<ManageArt />} />
                   <Route path="/ManageArtists" element={<ManageArtists />} />
                   <Route path="/ManageMuseums" element={<ManageMuseums />} />
+                  <Route path="/EntityRelationshipDiagram" element={<EntityRelationshipDiagram />} />
                 </Routes>
               </main>
             <Footer />
