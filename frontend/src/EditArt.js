@@ -62,8 +62,8 @@ const EditArt = (props) => {
       art.style ? (
         document.getElementById(art.style).selected = true
       ) : (
-      console.log("No style yet!")
-    )
+        console.log("No style yet!")
+      )
     }
     document.getElementById('artPiece').value = art.name;
     document.getElementById('artist').value = art.artist.name;
@@ -71,8 +71,8 @@ const EditArt = (props) => {
       art.museum ? (
         document.getElementById('museum').value = art.museum.name
       ) : (
-      console.log("No Museum yet!")
-    )
+        console.log("No Museum yet!")
+      )
     }
     document.getElementById(art.medium).selected = true;
     document.getElementById('yearCompleted').value = art.yearCompleted;
@@ -80,111 +80,114 @@ const EditArt = (props) => {
     document.getElementById('url').value = art.url;
   });
 
-    return (
+  return (
+    <div class="main-div-layout">
+      <section class="page_title">
+        <h2 class="page-title__header">
+          Colleague Hub - Art Management Form
+        </h2>
+        <h3 class="page-title__text">
+          Use the form below to edit existing paintings and sculptures within the museum database.
+        </h3>
+      </section>
       <div class="main-div-layout">
-        <section class="page_title">
-                <h2 class="page-title__header">
-                    Colleague Hub - Art Management Form
-                </h2>
-                <h3 class="page-title__text">
-                    Use the form below to edit existing paintings and sculptures within the museum database.
-                </h3>
-            </section>
-        <div class="main-div-layout">
-            <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
-              <div class="form-card">
-              <label class="form-label-styling-width">
+        <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event) }}>
+          <div class="form-card">
+            <label class="form-label-styling-width">
               <div class="form-label-styling">
-                  Art Form:
-                  <select class="form-input" id="artType">
-                    <option value="sculpture" id="Sculpture">Sculpture</option>
-                    <option value="painting" id="Painting">Painting</option>
-                  </select>
-                </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  Style:
-                  <select class="form-input" id="style">
-                    <option value="defaultStyle">-select-</option>
-                    <option value="sculpture" id="SCULPTURE">SCULPTURE</option>
-                  </>
-                ) : (
-                  <>
-                    <option value="other" id="OTHER">-select-</option>
-                    <option value="impressionist" id="IMPRESSIONIST">IMPRESSIONIST</option>
-                    <option value="abstract" id="ABSTRACT">ABSTRACT</option>
-                    <option value="renaissance" id="RENAISSANCE">RENAISSANCE</option>
-                    <option value="romanticism" id="ROMANTICISM">ROMANTICISM</option>
-                  </select>
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  Art Piece: 
-                  <input class="form-input" id="artPiece" name="name" type="text"/>
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  <ArtistDropdown />
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  <MuseumDropdown />
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  Medium:
-                  <select class="form-input" id="medium">
-                    <option value="defaultMedium">-select-</option>
-                    <option value="clay" id="CLAY">CLAY</option>
-                    <option value="marble" id="MARBLE">MARBLE</option>
-                    <option value="steel" id="STEEL">STEEL</option>
-                    <option value="bronze" id="BRONZE">BRONZE</option>
-                    <option value="oil" id="OIL">OIL</option>
-                    <option value="watercolour" id="WATERCOLOUR">WATERCOLOUR</option>
-                  </select>
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  Year Completed:
-                  <input class="form-input" id="yearCompleted" name="yearCompleted" type="text"/>
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  Back Story:
-                  <input class="form-input" id="backStory" name="backStory" type="text"/>
-                  </div>
-                </label>
-                <br />
-                <label class="form-label-styling-width">
-                <div class="form-label-styling">
-                  URL:
-                  <input class="form-input" id="url" name="url" type="text"/>
-                  </div>
-                </label>
-                <br />
-                <button class="button create-form-button">Update</button>
-                </div>
-            </form>
-            <div>
-              <label class="artCreatedLabel" id="artMessageLabel"></label>
-            </div>
+                Art Form:
+                <select class="form-input" id="artType">
+                  <option value={art.type} id={art.type}>{art.type}</option>
+                </select>
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+
+                Style:
+                <select className="form-input" id="style">
+                  {art.type === "Sculpture" ? (
+                    <>
+                      <option value="sculpture" id="SCULPTURE">SCULPTURE</option>
+                    </>
+                  ) : (
+                    <>
+                      <option value="other" id="OTHER">-select-</option>
+                      <option value="impressionist" id="IMPRESSIONIST">IMPRESSIONIST</option>
+                      <option value="abstract" id="ABSTRACT">ABSTRACT</option>
+                      <option value="renaissance" id="RENAISSANCE">RENAISSANCE</option>
+                      <option value="romanticism" id="ROMANTICISM">ROMANTICISM</option>
+                    </>
+                  )}
+                </select>
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                Art Piece:
+                <input class="form-input" id="artPiece" name="name" type="text" />
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                <ArtistDropdown />
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                <MuseumDropdown />
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                Medium:
+                <select class="form-input" id="medium">
+                  <option value="defaultMedium">-select-</option>
+                  <option value="clay" id="CLAY">CLAY</option>
+                  <option value="marble" id="MARBLE">MARBLE</option>
+                  <option value="steel" id="STEEL">STEEL</option>
+                  <option value="bronze" id="BRONZE">BRONZE</option>
+                  <option value="oil" id="OIL">OIL</option>
+                  <option value="watercolour" id="WATERCOLOUR">WATERCOLOUR</option>
+                </select>
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                Year Completed:
+                <input class="form-input" id="yearCompleted" name="yearCompleted" type="text" />
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                Back Story:
+                <input class="form-input" id="backStory" name="backStory" type="text" />
+              </div>
+            </label>
+            <br />
+            <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                URL:
+                <input class="form-input" id="url" name="url" type="text" />
+              </div>
+            </label>
+            <br />
+            <button class="button create-form-button">Update</button>
           </div>
-          </div>
-      );
+        </form>
+        <div>
+          <label class="artCreatedLabel" id="artMessageLabel"></label>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default EditArt;
