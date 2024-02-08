@@ -20,12 +20,13 @@ const Navbar = () => {
         updateMuseumList();
     };
         
-    
+    const depthLevel = 0;
+
     return(
         <nav class="desktop-nav">
             <ul class="menus"> 
                 {menuItemsData.map((menu, index) => {
-                    return <MenuItems items={menu} key={index} />;
+                    return <MenuItems items={menu} key={index} depthLevel={depthLevel} />;
                 })}
             </ul>
 

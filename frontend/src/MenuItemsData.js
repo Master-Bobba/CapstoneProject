@@ -18,16 +18,46 @@ export const menuItemsData = [
         title: 'Manage',
         submenu: [
             {
-              title: 'Create Art',
-              url: 'CreateArt',
+              title: 'Art',
+              submenu: [
+                {
+                  title: 'Create Art',
+                  url: 'CreateArt',
+                },
+                {
+                  title: 'Manage Art',
+                  url: 'ManageArt',
+                },
+
+              ],
             },
             {
-              title: 'Create Artist',
-              url: 'CreateArtist',
+              title: 'Artist',
+              submenu: [
+                {
+                  title: 'Create Artist',
+                  url: 'CreateArtist',
+                },
+                {
+                  title: 'Manage Artist',
+                  url: 'ManageArtist',
+                },
+
+              ],
             },
             {
-              title: 'Create Museum',
-              url: 'CreateMuseum',
+              title: 'Museum',
+              submenu: [
+                {
+                  title: 'Create Museum',
+                  url: 'CreateMuseum',
+                },
+                {
+                  title: 'Manage Museum',
+                  url: 'ManageMuseum',
+                },
+
+              ],
             },
           ],
       },
