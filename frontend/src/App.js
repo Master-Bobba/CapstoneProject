@@ -16,6 +16,9 @@ import Home from './Home';
 import EditArtist from './EditArtist';
 import EditMuseum from './EditMuseum';
 import EditArt from './EditArt';
+import ManageArt from './ManageArt';
+import ManageArtists from './ManageArtists';
+import ManageMuseums from './ManageMuseums';
 
 
 function App() {
@@ -38,6 +41,9 @@ function App() {
                   <Route path="/EditArtist" element={<EditArtist /> } />
                   <Route path="/EditMuseum" element={<EditMuseum /> } />
                   <Route path="/EditArt" element={<EditArt /> } />
+                  <Route path="/ManageArt" element={<ManageArt />} />
+                  <Route path="/ManageArtists" element={<ManageArtists />} />
+                  <Route path="/ManageMuseums" element={<ManageMuseums />} />
                 </Routes>
               </main>
             <Footer />
