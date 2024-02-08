@@ -59,11 +59,12 @@ body{
   background-position-y: center;
   background-attachment: fixed;
   position: relative; 
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 1000px;
 }
 
 .container {
@@ -76,7 +77,7 @@ body{
   margin-bottom: none;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 .main-div-layout{
