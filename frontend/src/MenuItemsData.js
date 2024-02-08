@@ -40,7 +40,7 @@ export const menuItemsData = [
                 },
                 {
                   title: 'Manage Artist',
-                  url: 'ManageArtist',
+                  url: 'ManageArtists',
                 },
 
               ],
@@ -54,7 +54,7 @@ export const menuItemsData = [
                 },
                 {
                   title: 'Manage Museum',
-                  url: 'ManageMuseum',
+                  url: 'ManageMuseums',
                 },
 
               ],
