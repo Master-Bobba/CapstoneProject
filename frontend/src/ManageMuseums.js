@@ -1,5 +1,5 @@
 import React from "react";
-import MuseumList from "./MuseumList";
+import ManageMuseumList from "./ManageMuseumList";
 import SearchBar from "./SearchBar";
 
 const ManageMuseums = () => {
@@ -11,12 +11,12 @@ const ManageMuseums = () => {
                 Colleague Hub - Manage Museums
                 </h2>
                 <h3 class="page-title__text">
-                    Manage our Museums using this page
+                    Manage our Museums below
                 </h3>
                 <SearchBar searchFor = "museum"/>
             </section>
             <div class="main-div-layout">
-                <MuseumList />
+                <ManageMuseumList />
             </div>
         </div>
         
