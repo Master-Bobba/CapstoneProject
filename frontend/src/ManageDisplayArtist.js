@@ -6,7 +6,7 @@ import artistProfile from './images/artistProfile.jpg';
 
 
 
-function DisplayArtist(props) {
+function ManageDisplayArtist(props) {
 
     const { updateArtistList } = useArtist();
     const navigate = useNavigate();
@@ -54,9 +54,15 @@ function DisplayArtist(props) {
                     )}
                 </div>
             </div>
+                <div class="buttons">
+                    <button class="buttonArt" id="edit" onClick={(event) => { handleEdit(event, props.artist) }}> Edit </button>
+                    <button class="buttonArt" id="delete" onClick={(event) => { handleDelete(event) }}> Delete </button>
+                </div>
+                
+            
         </div>
 
     );
 };
 
-export default DisplayArtist;
+export default ManageDisplayArtist;

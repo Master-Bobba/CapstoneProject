@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import DisplayMuseum from "./DisplayMuseum";
+import ManageDisplayMuseum from "./ManageDisplayMuseum";
 import { useMuseum } from "./MuseumContext";
 
-const MuseumList = () => {
+const ManageMuseumList = () => {
 
     const { museumData, setMuseumData} = useMuseum();
 
@@ -11,7 +11,7 @@ const MuseumList = () => {
             { museumData ? (
                 <div class="display-container">
                     {museumData.map((museum) => (
-                        <DisplayMuseum museum = { museum }/>
+                        <ManageDisplayMuseum museum = { museum }/>
                     ))}
                 </div>
             ) : (
@@ -23,5 +23,4 @@ const MuseumList = () => {
     );
 };
 
-
-export default MuseumList;
+export default ManageMuseumList;

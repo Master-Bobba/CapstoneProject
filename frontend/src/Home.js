@@ -28,12 +28,16 @@ const Home = () => {
                         <div key={art.id}>
                             <div>
                             <p>Title: {art.name}</p>
-                            <img src= {art.url} height={300} width={500} />
+                            <img src= {art.url} width={500} />
                             </div>
                         </div>
                     </Carousel.Item>
                     ))}
                 </Carousel>
+                <h2>Welcome to our museum!</h2>
+                <h4>Use the options on the top bar on the page</h4> 
+                <h4>to create or view art, artists, or museums!</h4>
+                <h4>See the "About us" link below for more information</h4>
             </div>
         ) : (
             <p>Loading...</p>

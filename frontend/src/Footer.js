@@ -17,9 +17,9 @@ const Header = () => {
           <div class="footer__nav-section__list">
             <span class="white-text">About The Capstone Museum Group</span>
             <ul>
-              <li><a class="footer__nav__item" href="#">About Us</a></li>
+              <li><a class="footer__nav__item" href="AboutUs">About Us</a></li>
               <li><a class="footer__nav__item" href="#">Corporate Responsibility</a></li>
-              <li><a class="footer__nav__item" href="#">ERD</a></li>
+              <li><a class="footer__nav__item" href="EntityRelationshipDiagram">ERD</a></li>
             </ul>
           </div>
         </div>

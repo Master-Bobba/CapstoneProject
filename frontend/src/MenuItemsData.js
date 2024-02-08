@@ -32,28 +32,28 @@ export const menuItemsData = [
               ],
             },
             {
-              title: 'Artist',
+              title: 'Artists',
               submenu: [
                 {
                   title: 'Create Artist',
                   url: 'CreateArtist',
                 },
                 {
-                  title: 'Manage Artist',
+                  title: 'Manage Artists',
                   url: 'ManageArtists',
                 },
 
               ],
             },
             {
-              title: 'Museum',
+              title: 'Museums',
               submenu: [
                 {
                   title: 'Create Museum',
                   url: 'CreateMuseum',
                 },
                 {
-                  title: 'Manage Museum',
+                  title: 'Manage Museums',
                   url: 'ManageMuseums',
                 },
 

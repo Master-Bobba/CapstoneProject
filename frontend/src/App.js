@@ -16,10 +16,11 @@ import Home from './Home';
 import EditArtist from './EditArtist';
 import EditMuseum from './EditMuseum';
 import EditArt from './EditArt';
+import AboutUs from './AboutUs';
 import ManageArt from './ManageArt';
 import ManageArtists from './ManageArtists';
 import ManageMuseums from './ManageMuseums';
-
+import EntityRelationshipDiagram from './Erd';
 
 function App() {
   return (
@@ -41,9 +42,11 @@ function App() {
                   <Route path="/EditArtist" element={<EditArtist /> } />
                   <Route path="/EditMuseum" element={<EditMuseum /> } />
                   <Route path="/EditArt" element={<EditArt /> } />
+                  <Route path="/AboutUs" element={<AboutUs />} />
                   <Route path="/ManageArt" element={<ManageArt />} />
                   <Route path="/ManageArtists" element={<ManageArtists />} />
                   <Route path="/ManageMuseums" element={<ManageMuseums />} />
+                  <Route path="/EntityRelationshipDiagram" element={<EntityRelationshipDiagram />} />
                 </Routes>
               </main>
             <Footer />

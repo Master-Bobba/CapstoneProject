@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ArtistList from "./ArtistList";
+import ManageArtistList from "./ManageArtistList";
 import SearchBar from "./SearchBar";
 
 const ManageArtists = () => {
@@ -17,7 +17,7 @@ const ManageArtists = () => {
                 <SearchBar searchFor = "artist"/>
             </section>
             <div class="main-div-layout">
-                <ArtistList />
+                <ManageArtistList />
             </div>
         </div>
     )

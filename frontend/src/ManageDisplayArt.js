@@ -3,7 +3,7 @@ import './display.css';
 import { useArt } from "./ArtContext";
 import { useNavigate } from "react-router-dom";
 
-function DisplayArt(props) {
+function ManageDisplayArt(props) {
 
     const { updateArtList } = useArt();
     const navigate = useNavigate();
@@ -30,8 +30,12 @@ function DisplayArt(props) {
                 <p class="line">Displayed in {props.art.museum.name}</p>
                 <p class="line">{props.art.backStory}</p>
             </div>
+            <div class="buttons">
+                <button class="buttonArt" id="edit" onClick={(event) => { handleEdit(event, props.art)}}>Edit</button>
+                <button class="buttonArt" id="delete" onClick={(event) => {handleDelete(event)}}>Delete</button>
+            </div>
        </div>
     );    
 }
 
-export default DisplayArt;
+export default ManageDisplayArt;

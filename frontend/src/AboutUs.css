@@ -1,0 +1,26 @@
+.teamHeader {
+    background-color: antiquewhite;
+}
+
+.techHeader {
+    background-color: antiquewhite;
+}
+
+.teamList{
+    background-color: aliceblue;
+}
+
+.techList{
+    background-color: aliceblue;
+}
+
+.techTeamContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    max-height: 50px;
+}
+
+.imageContainer {
+    margin-top: 20px;
+}

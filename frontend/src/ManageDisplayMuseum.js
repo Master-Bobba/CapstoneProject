@@ -5,7 +5,7 @@ import louvre4 from './images/louvre4.jpeg';
 import { useNavigate } from "react-router-dom";
 import './display.css';
 
-function DisplayMuseum (props) {
+function ManageDisplayMuseum (props) {
     
     const { updateMuseumList } = useMuseum();
     const navigate = useNavigate();
@@ -43,8 +43,12 @@ function DisplayMuseum (props) {
                 </div>
             </div>
             
+            <div class="buttons">
+                <button class="buttonArt" id="edit" onClick={(event) => { handleEdit(event, props.museum)}}> Edit </button>
+                <button class="buttonArt" id="delete" onClick={(event) => {handleDelete(event)}}> Delete </button>
+            </div>
         </div>
     );
 };
 
-export default DisplayMuseum;
+export default ManageDisplayMuseum;
