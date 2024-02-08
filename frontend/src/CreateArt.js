@@ -50,7 +50,7 @@ const CreateArt = () => {
 
     document.getElementById("artForm").reset();
     event.preventDefault();
-    document.getElementById("artMessageLabel").innerHTML = name + " successfully created";
+    document.getElementById("createArtMessageLabel").innerHTML = name + " successfully created";
   }
 
   return (
@@ -152,7 +152,7 @@ const CreateArt = () => {
           </div>
         </form>
         <div>
-          <label class="artCreatedLabel" id="artMessageLabel"></label>
+          <label class="artCreatedLabel" id="createArtMessageLabel"></label>
         </div>
       </div>
     </div>

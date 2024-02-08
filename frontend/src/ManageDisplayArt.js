@@ -27,7 +27,12 @@ function ManageDisplayArt(props) {
             <img src={props.art.url} class="img"></img>
             <div class="polaroid">
                 <p class="line"> {props.art.name} by {props.art.artist.name} </p>
-                <p class="line">Displayed in {props.art.museum.name}</p>
+                { props.art.museum === undefined ? (
+                    <p class="line">Currently not displayed</p>
+                    
+                ) : (
+                    <p class="line">Displayed in {props.art.museum.name}</p>
+                )}
                 <p class="line">{props.art.backStory}</p>
             </div>
             <div class="buttons">

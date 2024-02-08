@@ -1,6 +1,7 @@
 import React, { useEffect} from "react";
 import { useMuseum } from "./MuseumContext";
 import { useLocation } from "react-router-dom";
+import './Create.css';
 
 const EditMuseum = () => {
 
@@ -45,7 +46,7 @@ const EditMuseum = () => {
 
         document.getElementById("museumForm").reset();
         event.preventDefault();
-        document.getElementById("messageLabel").innerHTML = "Museum Successfully Updated";
+        document.getElementById("museumMessageLabel").innerHTML = "Museum Successfully Updated";
 
     }
 
@@ -101,7 +102,7 @@ const EditMuseum = () => {
                 </div>
             </form>
             <div>
-                <label class="museumCreatedLabel" id="messageLabel"></label>
+                <label class="museumCreatedLabel" id="museumMessageLabel"></label>
             </div>
         </div>
         </div>

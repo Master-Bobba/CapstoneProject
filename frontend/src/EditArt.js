@@ -13,11 +13,9 @@ const EditArt = (props) => {
   const art = location.state;
   // console.log(document.querySelector('#Painting').value)
   // const artStyle = document.querySelector('#artType').value;
+  console.log(art.type);
   const endPoint = process.env.REACT_APP_SPRING_URL + '/' + art.type.toLowerCase();
   // var name = document.querySelector('#artPiece').value;
-  console.log(endPoint);
-
-
 
   const handleSubmit = (event) => {
 

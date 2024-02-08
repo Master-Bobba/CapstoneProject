@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useArtist } from "./ArtistContext";
 
 
+
 const EditArtist = () => {
 
     const { updateArtistList } = useArtist();
@@ -34,7 +35,7 @@ const EditArtist = () => {
         });
         updateArtistList();
         document.getElementById("artistForm").reset();
-        document.getElementById("messageLabel").innerHTML = "Artist Successfully Updated.";
+        document.getElementById("artistMessageLabel").innerHTML = "Artist Successfully Updated.";
         
     }
 
@@ -74,9 +75,10 @@ const EditArtist = () => {
                     <br />
                     <button class="button create-form-button" >Update</button>
                 </div>
+                
             </form>
             <div>
-                <label class="artistCreatedLabel" id="messageLabel"></label>
+                <label class="artistCreatedLabel" id="artistMessageLabel"></label>
             </div>
         </div>
         </div>

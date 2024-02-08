@@ -31,7 +31,7 @@ const CreateMuseum = () => {
 
         document.getElementById("museumForm").reset();
         event.preventDefault();
-        document.getElementById("messageLabel").innerHTML = "Museum " + name + " successfully created";
+        document.getElementById("createMuseumMessageLabel").innerHTML = "Museum " + name + " successfully created";
     }
 
     return (
@@ -86,7 +86,7 @@ const CreateMuseum = () => {
                 </div>
             </form>
             <div>
-                <label class="museumCreatedLabel" id="messageLabel"></label>
+                <label class="museumCreatedLabel" id="createMuseumMessageLabel"></label>
             </div>
         </div>
         </div>

@@ -67,11 +67,33 @@
 .artistCreatedLabel{
     color: #85B7B6;
     /* background-color: #FFFFFF; */
+    text-align: center;
 
   }
 
   .museumCreatedLabel{
-    color: #85B7B6;
+    color: #072F2E;
     /* background-color: #FFFFFF; */
 
+  }
+
+  #artistMessageLabel{
+    color: white;
+    text-align: center;
+  }
+
+  #artMessageLabel{
+    color: white;
+  }
+  #museumMessageLabel{
+    color: white;
+  }
+  #createArtMessageLabel{
+    color: white;
+  }
+  #createArtistMessageLabel{
+    color: white;
+  }
+  #createMuseumMessageLabel{
+    color: white;
   }

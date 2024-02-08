@@ -23,7 +23,7 @@ const CreateArtist = () => {
         });
         updateArtistList();
         document.getElementById("artistForm").reset();
-        document.getElementById("messageLabel").innerHTML = "Artist " + name + " created";
+        document.getElementById("createArtistMessageLabel").innerHTML = "Artist " + name + " created";
         
     }
 
@@ -65,7 +65,7 @@ const CreateArtist = () => {
                 </div>
             </form>
             <div>
-                <label class="artistCreatedLabel" id="messageLabel"></label>
+                <label class="artistCreatedLabel" id="createArtistMessageLabel"></label>
             </div>
         </div>
         </div>
