@@ -7,7 +7,7 @@ const Header = () => {
         <footer class="footer">
         <div class="footer__nav-section">
           <div class="footer__nav-section__list">
-            <span class="white-text">Help & Information</span>
+            <span class="footer-header-text">Help & Information</span>
             <ul class="footer-list">
               <li class="footer-list__item"><a class="footer__nav__item" href="#">Opening Hours & Locations</a></li>
               <li><a class="footer__nav__item" href="#">Donate</a></li>
@@ -15,8 +15,8 @@ const Header = () => {
             </ul>
           </div>
           <div class="footer__nav-section__list">
-            <span class="white-text">About The Capstone Museum Group</span>
-            <ul>
+            <span class="footer-header-text">About The Capstone Museum Group</span>
+            <ul class="footer-list">
               <li><a class="footer__nav__item" href="AboutUs">About Us</a></li>
               <li><a class="footer__nav__item" href="#">Corporate Responsibility</a></li>
               <li><a class="footer__nav__item" href="EntityRelationshipDiagram">ERD</a></li>

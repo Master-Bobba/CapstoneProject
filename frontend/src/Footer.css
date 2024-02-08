@@ -37,8 +37,14 @@
 .footer-list{
   margin-bottom: 0;
   text-decoration: none;
+  list-style-type: none;
+  padding: 0 0 0 10px;
 }
 
 .footer-list__item a{
   text-decoration: none;
+}
+
+.footer-header-text{
+  font-weight: bold;
 }
