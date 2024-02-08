@@ -22,7 +22,7 @@ const Home = () => {
 
     return(
         artData ? (
-            <div>
+            <div class="main-div-layout">
                 <h2 class="welcome">Welcome to our museum!</h2>
                 <div class="caro">
                     <Carousel>
