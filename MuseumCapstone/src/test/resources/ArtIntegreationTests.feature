@@ -1,11 +1,11 @@
 Feature: I want to able to integration test Spring endpoints for the Art Controller
 
-  Scenario:
+  Scenario: Testing get all art
     Given I have a Spring Endpoint
     When I call the endpoint by name to return all art
     Then a list of art shall be returned
 
-  Scenario Outline:
+  Scenario Outline: Testing search
     Given I have a Spring Endpoint
     When I call the endpoint to return art by <Name>
     Then an art object with name: <Name> shall be returned

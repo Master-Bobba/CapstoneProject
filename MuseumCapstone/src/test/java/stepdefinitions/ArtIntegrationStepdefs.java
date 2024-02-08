@@ -2,6 +2,9 @@ package stepdefinitions;
 
 import com.example.controller.ArtController;
 import com.example.dto.ArtDto;
+import com.example.model.Artist;
+import com.example.model.Museum;
+import com.example.model.Painting;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -49,7 +52,13 @@ public class ArtIntegrationStepdefs {
 
     @When("I call the endpoint to add a painting with name: {string}")
     public void iCallTheEndpointToAddAPaintingWithNameName(String name) {
-        
+        Painting painting = new Painting();
+        painting.setName(name);
+        painting.setMuseum(new Museum());
+        painting.setArtist(new Artist());
+
+        artController.createArt(painting);
+
     }
 
     @Then("an art object with name: {string} shall be present in the database")
