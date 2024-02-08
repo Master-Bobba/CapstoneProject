@@ -26,7 +26,7 @@ function DisplayArt(props) {
         <div id={props.art.id} class="ArtistCard">
             <img src={props.art.url} class="img"></img>
             <div class="polaroid">
-                <p class="line"> {props.art.name}, {props.art.artist.name} </p>
+                <p class="line"> {props.art.name} by {props.art.artist.name} </p>
                 <p class="line">Displayed in {props.art.museum.name}</p>
                 <p class="line">{props.art.backStory}</p>
             </div>
