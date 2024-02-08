@@ -31,7 +31,7 @@ const Home = () => {
                             <div key={art.id}>
                                 <div class="mainContent">
                                     <p class="title">{art.name} by { art.artist.name}</p>
-                                    <img class="mainContent" src= {art.url} width={500} />
+                                    <img class="imageCaro" src= {art.url} width={500} />
                                     
                                 </div>
                                 
@@ -43,8 +43,8 @@ const Home = () => {
                 
                 <div class="mainContent">
                     <h4 class="frontText"></h4> 
-                    <h3 class="frontText">Use the options on the top bar on the page to create or view art, artists, or museums!</h3>
-                    <h3 class="frontText"> See the "About us" link below for more information</h3>
+                    <h5 class="frontText">Use the options on the top bar on the page to create or view art, artists, or museums!</h5>
+                    <h5 class="frontText"> See the "About us" link below for more information</h5>
                 </div>
                 
             </div>
