@@ -57,7 +57,7 @@ const EditArt = (props) => {
 
     useEffect(() => {
 
-      // document.getElementById(art.type).selected = true;
+      document.getElementById(art.type).selected = true;
       { art.style ? (
         document.getElementById(art.style).selected = true
       ) : (
@@ -89,14 +89,18 @@ const EditArt = (props) => {
         <div class="main-div-layout">
             <form class="form-card-background" id="artForm" onSubmit={(event) => { handleSubmit(event)}}>
               <div class="form-card">
-              <label>
-                  {/* Art Form:
+              <label class="form-label-styling-width">
+              <div class="form-label-styling">
+                  Art Form:
                   <select class="form-input" id="artType">
                     <option value="sculpture" id="Sculpture">Sculpture</option>
                     <option value="painting" id="Painting">Painting</option>
-                  </select> */}
+                  </select>
+                </div>
                 </label>
-                <label>
+                <br />
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   Style:
                   <select class="form-input" id="style">
                     <option value="defaultStyle">-select-</option>
@@ -106,24 +110,30 @@ const EditArt = (props) => {
                     <option value="renaissance" id="RENAISSANCE">RENAISSANCE</option>
                     <option value="romanticism" id="ROMANTICISM">ROMANTICISM</option>
                   </select>
+                  </div>
                 </label>
                 <br />
-                <label>
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   Art Piece: 
                   <input class="form-input" id="artPiece" name="name" type="text"/>
+                  </div>
                 </label>
                 <br />
-                <label>
-                  Artist:
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   <ArtistDropdown />
+                  </div>
                 </label>
                 <br />
-                <label>
-                  Museum:
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   <MuseumDropdown />
+                  </div>
                 </label>
                 <br />
-                <label>
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   Medium:
                   <select class="form-input" id="medium">
                     <option value="defaultMedium">-select-</option>
@@ -134,24 +144,31 @@ const EditArt = (props) => {
                     <option value="oil" id="OIL">OIL</option>
                     <option value="watercolour" id="WATERCOLOUR">WATERCOLOUR</option>
                   </select>
+                  </div>
                 </label>
                 <br />
-                <label>
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   Year Completed:
                   <input class="form-input" id="yearCompleted" name="yearCompleted" type="text"/>
+                  </div>
                 </label>
                 <br />
-                <label>
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   Back Story:
                   <input class="form-input" id="backStory" name="backStory" type="text"/>
+                  </div>
                 </label>
                 <br />
-                <label>
+                <label class="form-label-styling-width">
+                <div class="form-label-styling">
                   URL:
                   <input class="form-input" id="url" name="url" type="text"/>
+                  </div>
                 </label>
                 <br />
-                <button class="button">Update</button>
+                <button class="button create-form-button">Update</button>
                 </div>
             </form>
             <div>
