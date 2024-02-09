@@ -15,7 +15,6 @@ Feature: I want to able to integration test Spring endpoints for the Artist Cont
       | "Michelangelo"     |
       | "Vincent van Gogh" |
 
-#  @SetUpTestDataBeforeAndCleanUpAfter
   Scenario Outline: Test post request for artist
     Given I have a Spring Endpoint for Artist
     When I call the endpoint to add an Artist with name: <Name>
@@ -24,4 +23,9 @@ Feature: I want to able to integration test Spring endpoints for the Artist Cont
       | Name              |
       | "Test Artist 1" |
       | "Test Artist 2" |
-    
+
+  Scenario: Test delete request for artist
+    Given I have a Spring Endpoint for Artist
+    Given I have an artist in my database
+    When I call the endpoint to delete the artist
+    Then The artist is no longer present in the database
