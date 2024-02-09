@@ -15,11 +15,18 @@ Feature: I want to able to integration test Spring endpoints for the Museum Cont
       | 11 |
       | 12 |
 
+  @SetUpTestMuseumDataBeforeAndCleanUpAfter
   Scenario Outline:
     Given I have a Museum Spring Endpoint
     When I call the endpoint to add a museum with name: <Name>
     Then a museum object with name: <Name> shall be present in the database
     Examples:
       | Name              |
-      | "Test Painting 1" |
-      | "Test Painting 2" |
+      | "Test Museum 1" |
+      | "Test Museum 2" |
+
+  Scenario: Test delete request for museum
+    Given I have a Museum Spring Endpoint
+    Given I have a Museum in my database
+    When I call the endpoint to delete the Museum
+    Then The Museum is no longer present in the database
