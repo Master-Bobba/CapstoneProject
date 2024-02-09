@@ -42,7 +42,7 @@ public class ArtIntegrationStepdefs {
     
     Painting painting;
 
-    @Given("I have a Spring Endpoint")
+    @Given("I have a Spring Endpoint for Art")
     public void iHaveASpringEndpoint() {
         Assertions.assertNotNull(artController);
     }
