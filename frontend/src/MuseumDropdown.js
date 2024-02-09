@@ -11,7 +11,9 @@ const MuseumDropdown = () => {
             Museum:
             { museumData ? (
                 <select class="form-input" id="museum" name="museum">
-                    <option value="defaultMuseum">-select-</option>
+                    <option value="defaultMuseum">
+                        <p id="0">-select-</p> 
+                    </option>
                     {museumData.map((museum) => (
                         <option>
                         <DisplayMuseumDropdown museum = { museum } />

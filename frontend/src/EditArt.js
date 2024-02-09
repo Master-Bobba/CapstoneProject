@@ -30,23 +30,39 @@ const EditArt = (props) => {
     const selectedOptionMuseum = selectElementMuseum.options[selectedIndexMuseum];
     const selectedIdMuseum = selectedOptionMuseum.querySelector('p').getAttribute('id');
     console.log('Selected Museum id:', selectedIdMuseum);
-
-    fetch(endPoint, {
-      method: 'put',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        "id": art.id,
-        "name": document.querySelector('#artPiece').value,
-        "artist": { "id": selectedIdArtist },
-        "medium": document.querySelector('#medium').value.toUpperCase(),
-        "museum": { "id": selectedIdMuseum },
-        "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
-        "backStory": document.querySelector('#backStory').value,
-        "style": document.querySelector('#style').value.toUpperCase(),
-        "url": document.querySelector('#url').value
-      })
-    });
-
+    
+    if (selectedIdMuseum == 0) {
+      fetch(endPoint, {
+        method: 'put',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          "id": art.id,
+          "name": document.querySelector('#artPiece').value,
+          "artist": { "id": selectedIdArtist },
+          "medium": document.querySelector('#medium').value.toUpperCase(),
+          "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
+          "backStory": document.querySelector('#backStory').value,
+          "style": document.querySelector('#style').value.toUpperCase(),
+          "url": document.querySelector('#url').value
+        })
+      });
+    } else {
+      fetch(endPoint, {
+        method: 'put',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          "id": art.id,
+          "name": document.querySelector('#artPiece').value,
+          "artist": { "id": selectedIdArtist },
+          "medium": document.querySelector('#medium').value.toUpperCase(),
+          "museum": { "id": selectedIdMuseum },
+          "yearCompleted": parseInt(document.querySelector('#yearCompleted').value),
+          "backStory": document.querySelector('#backStory').value,
+          "style": document.querySelector('#style').value.toUpperCase(),
+          "url": document.querySelector('#url').value
+        })
+      });
+    }
     document.getElementById("artForm").reset();
     event.preventDefault();
     document.getElementById("artMessageLabel").innerHTML = art.name + " successfully updated";
